@@ -3,6 +3,7 @@ require 'bundler'
 Bundler.setup
 
 require 'sinatra'
+require 'sass'
 
 require File.join('.', 'models', 'patient')
 
@@ -24,5 +25,10 @@ end
 get "/patients.json" do
   content_type 'application/json'
   {:patients => Patient.all}.to_json
+end
+
+get "/patients/:id.json" do
+  content_type 'application/json'
+  Patient.find(params[:id]).to_json
 end
 

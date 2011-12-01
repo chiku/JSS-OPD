@@ -1,52 +1,64 @@
 var Application = {
-    Models: {},
+  Models: {},
 
-    Views: {
-      Patients: {}
-    },
+  Collections: {},
 
-    Routers: {},
+  Views: {
+    Patients: {}
+  },
 
-    initialize: function() {
-        new Application.Routers.Patients();
-        Backbone.history.start();
-    }
+  Routers: {},
+
+  initialize: function() {
+    new Application.Routers.Patients();
+    Backbone.history.start();
+  }
 };
 
 Application.Models.Patient = Backbone.Model.extend({
   url: function() {
-    var base = '/documents';
-    return base + this.id;
+    return Configurations.urls.patient + this.get('id') + '.json';
+  }
+});
+
+
+Application.Collections.Patients = Backbone.Collection.extend({
+  model: Application.Models.Patient,
+
+  url: function() {
+    return Configurations.urls.patient + '.json';
+  },
+
+  parse: function(response) {
+    return response.patients;
   }
 });
 
 
 Application.Routers.Patients = Backbone.Router.extend({
   routes: {
-    "patients:/id": "show",
-    "":             "index"
+    "":             "index",
+    "patients":     "index",
+    "patients:/id": "show"
   },
 
   show: function(id) {
     var patient = new Application.Models.Patient({id: id});
-    doc.fetch({
-      success: function(model, response) {
-        new Application.Views.Patients.Show({model: patient})
-      }
-    });
+    new Application.Views.Patients.Show({model: patient});
   },
 
   index: function() {
-    jQuery.getJSON('/patients.json', function(document) {
-      var patients = _(document.patients).map(function(patient) { return new Application.Models.Patient(patient); });
-      return new Application.Views.Patients.Index(patients);
+    new Application.Collections.Patients().fetch({
+      success: function(patients, response) {
+        return new Application.Views.Patients.Index(patients.models, this.containers);
+      }
     });
   }
 });
 
 Application.Views.Patients.Index = Backbone.View.extend({
   initialize: function(patients) {
-    this.container = jQuery('#patients-container');
+    this.container = jQuery(Configurations.selectors.patients);
     this.render(patients);
   },
 
@@ -59,6 +71,4 @@ Application.Views.Patients.Index = Backbone.View.extend({
     });
   }
 });
-
-window.Application = Application;
 

@@ -36,14 +36,26 @@
     %script{ :src => "javascripts/patients.js" }
 
     :javascript
-      jQuery(function() { Application.initialize(); });
+      jQuery(function() {
+        var Configurations = {
+          selectors: {
+              patients: '#patients-container',
+              patientDetails: '#patient-details-container'
+            },
+            urls: {
+              'patient': '/patients'
+            }
+        };
+        window.Configurations = Configurations;
+
+        Application.initialize();
+      });
 
   %body
     #container
       %header
       #main{ :role => 'main' }
         #patients-container
-        = yield
+        #patient-details-container
       %footer
-
 
