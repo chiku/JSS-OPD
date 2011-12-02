@@ -58,17 +58,17 @@ Application.Routers.Patients = Backbone.Router.extend({
 
 Application.Views.Patients.Index = Backbone.View.extend({
   initialize: function(patients) {
-    this.container = jQuery(Configurations.selectors.patients);
+    this.patients = jQuery(Configurations.selectors.patients);
     this.render(patients);
   },
 
   render: function(patients) {
-    _.each(patients, function(patient) {
+    _(patients).each(function(patient) {
       jQuery('<div>', {
         'class': 'patient',
         'text': patient.get('name')
-      }).appendTo(this.container);
-    });
+      }).appendTo(this.patients);
+    }, this);
   }
 });
 
