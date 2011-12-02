@@ -8,7 +8,7 @@ Steps to get the application running
 
 * git clone the repository
 
-* From the root of the project run these command
+* From the root directory of the project run these command
 
 ``` shell
   gem install bundler
@@ -17,3 +17,19 @@ Steps to get the application running
 ```
 
 * Visit http://localhost:4567
+
+*Note*
+
+_Running bundle is a one time thing. Re-run bundle when the file Gemfile changes_
+
+Steps to run tests
+----------------
+
+* From the root directory of the project run these commands
+
+``` shell
+  gem install bundler
+  ENV=test bundle
+  rake
+```
+
