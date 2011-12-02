@@ -3,7 +3,7 @@ Bundler.setup
 
 require 'sinatra'
 
-require File.join('.', 'models', 'patient')
+Dir[File.join(File.dirname(__FILE__), 'lib', 'models', '*.rb')].each {|file| require file }
 
 get "/" do
   File.read(File.join('public', 'index.html'))

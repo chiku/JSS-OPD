@@ -20,8 +20,9 @@ class Patient
 
     [p1, p2, p3]
   end
-  
+
   def to_json(*args)
     {:name => name, :doctor_name => doctor_name, :id => id}.to_json
   end
 end
+
