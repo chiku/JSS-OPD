@@ -44,13 +44,11 @@ describe("Patients collection", function() {
 
   describe("on fetching from server", function() {
     beforeEach(function() {
-      this.fakeServer = sinon.fakeServer.create();
-      this.fakeServer.respondWith("GET", "/patients.json", [
-          200,
-          {"Content-Type": "application/json"},
-          '{"patients":[{"name":"Patient Name 1","doctor_name":"Doctor Name 1","id":1},' +
-              '{"name":"Patient Name 2","doctor_name":"Doctor Name 2","id":2}]}'
-        ]);
+      this.fakeServer = createFakeServer();
+    });
+
+    afterEach(function() {
+      this.fakeServer.stop();
     });
 
     it("parses the response", function() {
