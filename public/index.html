@@ -55,9 +55,16 @@
   <script src="javascripts/lib/backbone.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
-  <script defer src="javascripts/configurations.js"></script>
-  <script defer src="javascripts/patients.js"></script>
-  <script defer>
+  <script src="javascripts/boot/application.js"></script>
+  <script src="javascripts/config/routes.js"></script>
+  <script src="javascripts/config/urls.js"></script>
+  <script src="javascripts/config/selectors.js"></script>
+
+  <script src="javascripts/app/models/patient.js"></script>
+  <script src="javascripts/app/collections/patients.collection.js"></script>
+  <script src="javascripts/app/routers/patients.router.js"></script>
+  <script src="javascripts/app/views/patients.view.index.js"></script>
+  <script>
     jQuery(function() {
       Application.initialize();
     });

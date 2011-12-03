@@ -16,7 +16,9 @@ src_files:
   - public/javascripts/lib/underscore.js
   - public/javascripts/lib/backbone.js
   - public/javascripts/configurations.js
-  - public/javascripts/patients.js
+  - public/javascripts/boot/application.js
+  - public/javascripts/config/*.js
+  - public/javascripts/app/**/*.js
 
 # stylesheets
 #
