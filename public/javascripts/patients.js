@@ -3,11 +3,13 @@ var Application = {
 
   Collections: {},
 
+  Routes: {},
+
+  Routers: {},
+
   Views: {
     Patients: {}
   },
-
-  Routers: {},
 
   initialize: function() {
     new Application.Routers.Patients();
@@ -39,24 +41,29 @@ Application.Collections.Patients = Backbone.Collection.extend({
 });
 
 
-Application.Routers.Patients = Backbone.Router.extend({
-  initialize: function() {
-    this.route('', 'index', this.index);
-    this.route(Configurations.documents.patient, 'index', this.index);
-    this.route(Configurations.documents.patient + '/:id', 'index', this.show);
-  },
+Application.Routes = (function() {
+  var routes = {};
 
-  show: function(id) {
-    var patient = new Application.Models.Patient({id: id});
-    new Application.Views.Patients.Show(patient);
-  },
+  routes.patients = {};
+  routes.patients[''] = 'index';
+  routes.patients[Configurations.documents.patient] = 'index';
+  routes.patients[Configurations.documents.patient + '/:id'] = 'show';
+
+  return routes;
+})();
+
+Application.Routers.Patients = Backbone.Router.extend({
+  routes: Application.Routes.patients,
 
   index: function() {
     new Application.Collections.Patients().fetch({
       success: function(patients, response) {
-        return new Application.Views.Patients.Index(patients.models);
+        new Application.Views.Patients.Index(patients.models);
       }
     });
+  },
+
+  show: function(id) {
   }
 });
 
