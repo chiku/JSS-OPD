@@ -1,4 +1,4 @@
-require "application"
+require File.join('.', 'application')
 
 run Sinatra::Application
 

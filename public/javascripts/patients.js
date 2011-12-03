@@ -17,7 +17,7 @@ var Application = {
 
 Application.Models.Patient = Backbone.Model.extend({
   url: function() {
-    return Configurations.urls.patient + this.get('id') + '.json';
+    return Configurations.urls.patient + '/' + this.get('id') + '.json';
   }
 });
 
@@ -31,26 +31,30 @@ Application.Collections.Patients = Backbone.Collection.extend({
 
   parse: function(response) {
     return response.patients;
+  },
+
+  comparator: function(patient) {
+    return patient.get("name");
   }
 });
 
 
 Application.Routers.Patients = Backbone.Router.extend({
-  routes: {
-    "":             "index",
-    "patients":     "index",
-    "patients:/id": "show"
+  initialize: function() {
+    this.route('', 'index', this.index);
+    this.route(Configurations.documents.patient, 'index', this.index);
+    this.route(Configurations.documents.patient + '/:id', 'index', this.show);
   },
 
   show: function(id) {
     var patient = new Application.Models.Patient({id: id});
-    new Application.Views.Patients.Show({model: patient});
+    new Application.Views.Patients.Show(patient);
   },
 
   index: function() {
     new Application.Collections.Patients().fetch({
       success: function(patients, response) {
-        return new Application.Views.Patients.Index(patients.models, this.containers);
+        return new Application.Views.Patients.Index(patients.models);
       }
     });
   }

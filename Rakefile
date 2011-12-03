@@ -1,8 +1,12 @@
 require 'rake/testtask'
+require 'jasmine'
+
+load 'jasmine/tasks/jasmine.rake'
 
 Rake::TestTask.new do |t|
-  t.pattern = File.join('specs', '**','*_spec.rb')
+  t.pattern = File.join('spec', '**','*_spec.rb')
 end
 
-task :default => :test
+task :default => [:test, :'jasmine:ci']
+
 
