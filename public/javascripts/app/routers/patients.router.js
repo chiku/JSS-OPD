@@ -4,7 +4,7 @@ Application.Routers.Patients = Backbone.Router.extend({
   index: function() {
     new Application.Collections.Patients().fetch({
       success: function(patients, response) {
-        new Application.Views.Patients.Index(patients.models);
+        new Application.Views.Patients.Index({collection: patients.models});
       }
     });
   },
