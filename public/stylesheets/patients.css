@@ -2,6 +2,10 @@
   clear: left;
 }
 
+.error {
+  color: #cc1122
+}
+
 #patients-container {
   width: 50%;
   float: left;

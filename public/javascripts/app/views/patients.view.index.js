@@ -1,14 +1,15 @@
-Application.Views.Patients = {};
+Application.Views.Patients = Application.Views.Patients || {};
 
 Application.Views.Patients.Index = Backbone.View.extend({
   el: Application.Configuration.Selectors.patients,
 
   initialize: function(options) {
+    this.patients = options.collection;
     this.render(options.collection);
   },
 
-  render: function(patients) {
-    _(patients).each(function(patient) {
+  render: function() {
+    _(this.patients).each(function(patient) {
       this.createNodeFor(patient);
     }, this);
 

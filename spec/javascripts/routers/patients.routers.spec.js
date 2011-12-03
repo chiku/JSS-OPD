@@ -1,29 +1,27 @@
 describe("Patients routing", function() {
   describe("for index", function() {
-    afterEach(function() {
-      this.fakeSever.stop();
-    });
-
     it("creates patients index view on success", function() {
+      var fakeSever = createFakeSuccessServer();
+      var patientsIndexViewStub = spyOn(Application.Views.Patients, "Index");
       var router = new Application.Routers.Patients();
 
-      var patientsIndexViewStub = spyOn(Application.Views.Patients, "Index");
-      this.fakeSever = createFakeServer();
-
       router.index();
-      this.fakeSever.respond();
+      fakeSever.respond();
+
       expect(patientsIndexViewStub).toHaveBeenCalled();
+      fakeSever.stop();
     });
 
-    it("doesn't create patients index view on failure", function() {
+    it("creates patients index error view on failure", function() {
+      var fakeSever = createFakeErrorServer();
+      var patientsIndexFailureViewStub = spyOn(Application.Views.Patients, "IndexError");
       var router = new Application.Routers.Patients();
 
-      var patientsIndexViewStub = spyOn(Application.Views.Patients, "Index");
-      this.fakeSever = createFakeErrorServer();
-
       router.index();
-      this.fakeSever.respond();
-      expect(patientsIndexViewStub).not.toHaveBeenCalled();
+      fakeSever.respond();
+
+      expect(patientsIndexFailureViewStub).toHaveBeenCalled();
+      fakeSever.stop();
     });
   });
 });
