@@ -55,23 +55,10 @@
   <script src="javascripts/lib/backbone.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
+  <script defer src="javascripts/configurations.js"></script>
   <script defer src="javascripts/patients.js"></script>
   <script defer>
     jQuery(function() {
-      var Configurations = {
-        selectors: {
-            patients: '#patients-container',
-            patientDetails: '#patient-details-container'
-          },
-          documents: {
-            'patient': 'patients'
-          },
-          urls: {
-            'patient': '/patients'
-          }
-      };
-      window.Configurations = Configurations;
-
       Application.initialize();
     });
   </script>

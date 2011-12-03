@@ -10,3 +10,6 @@ var Configurations = {
       'patient': '/patients'
     }
 };
+
+window.Configurations = Configurations;
+
