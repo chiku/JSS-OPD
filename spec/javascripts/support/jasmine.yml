@@ -13,9 +13,9 @@
 src_files:
   - spec/javascripts/support/sinon-1.0.0.js
   - spec/javascripts/fixtures/*.fixture.js
-  - public/javascripts/libs/jquery-1.7.1.js
-  - public/javascripts/libs/underscore.js
-  - public/javascripts/libs/backbone.js
+  - public/javascripts/lib/jquery-1.7.1.js
+  - public/javascripts/lib/underscore.js
+  - public/javascripts/lib/backbone.js
   - public/javascripts/**/*.js
 
 # stylesheets

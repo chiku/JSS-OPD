@@ -1,15 +1,15 @@
 source "http://rubygems.org"
 
-gem "sinatra"
 gem "rake"
+gem "sinatra"
 
 group :development do
-  gem "shotgun"
+  gem "shotgun", :require => false
 end
 
 group :test do
   gem "minitest"
   gem "minitest-reporters"
-  gem "jasmine"
+  gem "jasmine", :require => false
 end
 
