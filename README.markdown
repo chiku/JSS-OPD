@@ -4,7 +4,7 @@ A spike to test suitability of backbone for openMRS
 Steps to get the application running
 ------------------------------------
 
-* Install ruby preferably version 1.9.2+
+* Install ruby preferably version 1.9.2+. Ensure that ruby is in your path
 
 * git clone the repository
 
@@ -12,7 +12,7 @@ Steps to get the application running
 
 ``` shell
   gem install bundler
-  bundle
+  bundle install
   ruby application.rb
 ```
 
@@ -28,8 +28,8 @@ Steps to run tests
 * From the root directory of the project run these commands
 
 ``` shell
-  gem install bundler
-  ENV=test bundle
+  gem install bundler # if you haven't already install bundler
+  bundle install # if you haven't already run bundle
   rake
 ```
 
