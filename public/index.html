@@ -40,13 +40,10 @@
   </header>
 
   <div role="main">
-    <div id="patients-container"></div>
-    <div id="patient-details-container"></div>
   </div>
 
   <footer>
   </footer>
-
 
   <!-- JavaScript at the bottom for fast page loading -->
   <script src="javascripts/lib/jquery-1.7.1.js"></script>
@@ -55,7 +52,7 @@
   <script src="javascripts/lib/backbone.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
-  <script src="javascripts/boot/application.js"></script>
+  <script src="javascripts/boot/initialize.js"></script>
   <script src="javascripts/config/routes.js"></script>
   <script src="javascripts/config/urls.js"></script>
   <script src="javascripts/config/selectors.js"></script>
@@ -65,11 +62,8 @@
   <script src="javascripts/app/routers/patients.router.js"></script>
   <script src="javascripts/app/views/patients.view.index.js"></script>
   <script src="javascripts/app/views/patients.view.indexerror.js"></script>
-  <script>
-    jQuery(function() {
-      Application.initialize();
-    });
-  </script>
+
+  <script src="javascripts/boot/run.js"></script>
   <!-- end scripts -->
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.

@@ -1,7 +1,7 @@
 Application.Views.Patients = Application.Views.Patients || {};
 
 Application.Views.Patients.IndexError = Backbone.View.extend({
-  el: Application.Configuration.Selectors.patients,
+  el: '#' + Application.Configuration.Selectors.viaId.patients,
 
   initialize: function() {
     this.render();

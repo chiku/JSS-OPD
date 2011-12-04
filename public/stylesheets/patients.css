@@ -9,6 +9,11 @@
 #patients-container {
   width: 50%;
   float: left;
+  text-align: center;
+}
+
+.patient {
+  width: 50%;
 }
 
 .patient-name {

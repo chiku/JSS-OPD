@@ -1,7 +1,7 @@
 Application.Views.Patients = Application.Views.Patients || {};
 
 Application.Views.Patients.Index = Backbone.View.extend({
-  el: Application.Configuration.Selectors.patients,
+  el: '#' + Application.Configuration.Selectors.viaId.patients,
 
   initialize: function(options) {
     this.patients = options.collection;
@@ -20,9 +20,10 @@ Application.Views.Patients.Index = Backbone.View.extend({
     var template = _.template(
       "<div class='patient'>" +
          "<div class='patient-name'> <%= patientName %> </div>" +
-         "<div class='doctor-name'> <%= doctorName %> </div>" +
-         "<div class='patient-id'> <%= patientId %> </div>" +
-         "<div class='clear-left'></div>" +
+         "<div class='patient-more-info'>" +
+           "<div class='doctor-name'> <%= doctorName %> </div>" +
+           "<div class='patient-id'> <%= patientId %> </div>" +
+         "</div>" +
       "</div>");
 
     jQuery(template({

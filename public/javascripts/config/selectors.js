@@ -1,5 +1,9 @@
 Application.Configuration.Selectors = {
-  patients:       '#patients-container',
-  patientDetails: '#patient-details-container'
+  main:             'body div[role="main"]',
+
+  viaId: {
+    patients:       'patients-container',
+    patientDetails: 'patient-details-container'
+  }
 };
 
