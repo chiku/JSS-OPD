@@ -1,7 +1,7 @@
+#!/usr/bin/env ruby
+
 require 'bundler'
 Bundler.setup
-
-require 'sinatra'
 
 Dir[File.join(File.dirname(__FILE__), 'lib', 'models', '*.rb')].each {|file| require file }
 
