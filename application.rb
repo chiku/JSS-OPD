@@ -5,6 +5,10 @@ require 'sinatra'
 
 Dir[File.join(File.dirname(__FILE__), 'lib', 'models', '*.rb')].each {|file| require file }
 
+use Rack::Auth::Basic, "Restricted Area" do |username, password|
+  [username, password] == ['developer', '!abcd1234']
+end
+
 get "/" do
   File.read(File.join('public', 'index.html'))
 end
