@@ -1,12 +1,14 @@
-require 'rake/testtask'
+require 'rspec/core/rake_task'
 require 'jasmine'
 
 load 'jasmine/tasks/jasmine.rake'
 
-Rake::TestTask.new do |t|
-  t.pattern = File.join('spec', '**','*_spec.rb')
+desc "Run specs"
+task :spec do
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.rspec_opts = %w{--colour --format progress}
+    t.pattern = 'spec/**/*_spec.rb'
+  end
 end
 
-task :default => [:test, :'jasmine:ci']
-
-
+task :default => [:spec, :'jasmine:ci']

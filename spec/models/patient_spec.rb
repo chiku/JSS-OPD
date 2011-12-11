@@ -1,5 +1,4 @@
 require File.join(File.expand_path(File.dirname(__FILE__)), '..', 'spec_helper')
-require File.join(File.expand_path(File.dirname(__FILE__)), '..', '..', 'lib', 'models', 'patient.rb')
 
 describe Patient do
   let :patient do
@@ -7,15 +6,15 @@ describe Patient do
   end
 
   it "has a name" do
-    patient.name.must_equal "Patient Name 10"
+    patient.name.should == "Patient Name 10"
   end
 
   it "has a doctor" do
-    patient.doctor_name.must_equal "Doctor Name 10"
+    patient.doctor_name.should == "Doctor Name 10"
   end
 
   it "has an ID" do
-    patient.id.must_equal 10
+    patient.id.should == 10
   end
 
   describe "JSON representation" do
@@ -25,24 +24,24 @@ describe Patient do
     end
 
     it "has a name" do
-      decoded_json['name'].must_equal patient.name
+      decoded_json['name'].should == patient.name
     end
 
     it "has a doctor" do
-      decoded_json['doctor_name'].must_equal patient.doctor_name
+      decoded_json['doctor_name'].should == patient.doctor_name
     end
 
     it "has an ID" do
-      decoded_json['id'].must_equal patient.id
+      decoded_json['id'].should == patient.id
     end
   end
 
   it "can be found by ID" do
-    Patient.find(50).id.must_equal 50
+    Patient.find(50).id.should == 50
   end
 
   it "can be listed" do
-    Patient.all.count.must_equal 3
+    Patient.all.count.should == 3
   end
 end
 
