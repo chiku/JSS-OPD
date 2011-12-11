@@ -13,10 +13,10 @@ Steps to get the application running
 ``` shell
   gem install bundler
   bundle install
-  ruby application.rb
+  rackup
 ```
 
-* Visit http://localhost:4567
+* Visit http://localhost:9292
 
 *Note*
 
@@ -32,4 +32,3 @@ Steps to run tests
   bundle install # if you haven't already run bundle
   rake
 ```
-
