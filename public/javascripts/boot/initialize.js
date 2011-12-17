@@ -18,6 +18,6 @@ var Application = {
   initialize: function() {
     new Application.Routers.Patients();
     Backbone.history.start();
-    Application.collections.Patients.fetch();
+    Application.collections.patients.fetch();
   }
 };

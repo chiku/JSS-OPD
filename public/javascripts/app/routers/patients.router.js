@@ -7,7 +7,7 @@ Application.Routers.Patients = Backbone.Router.extend({
 
   initialize: function() {
     this.patientsView = new Application.Views.Patients.Index({
-      collection: Application.collections.Patients
+      collection: Application.collections.patients
     });
   },
 
