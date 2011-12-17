@@ -1,7 +1,7 @@
 describe("Patients collection", function() {
   it("has the URL to fetch patients from", function() {
     var patients = new Application.Collections.Patients();
-    expect(patients.url()).toEqual('/patients.json');
+    expect(patients.url).toEqual('/patients.json');
   });
 
   it("finds a patient via ID", function() {

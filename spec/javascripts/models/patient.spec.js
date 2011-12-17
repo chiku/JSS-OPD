@@ -17,9 +17,5 @@ describe("Patient model", function() {
     it("has an ID", function() {
       expect(patient.get('id')).toEqual(101);
     });
-
-    it("has a URL", function() {
-      expect(patient.url()).toEqual("/patients/101.json");
-    });
   });
 });

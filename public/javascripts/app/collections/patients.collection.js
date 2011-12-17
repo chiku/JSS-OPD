@@ -1,9 +1,7 @@
 Application.Collections.Patients = Backbone.Collection.extend({
   model: Application.Models.Patient,
 
-  url: function() {
-    return Application.Configuration.Urls.patient + '.json';
-  },
+  url: Application.Configuration.Urls.patients,
 
   parse: function(response) {
     return response.patients;
