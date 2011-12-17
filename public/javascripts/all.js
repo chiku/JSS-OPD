@@ -1,7 +1,6 @@
 /**
  * @depends boot/initialize.js
 
- * @depends config/routes.js
  * @depends config/selectors.js
  * @depends config/urls.js
 

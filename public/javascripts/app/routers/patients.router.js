@@ -1,5 +1,9 @@
 Application.Routers.Patients = Backbone.Router.extend({
-  routes: Application.Configuration.Routes.patients,
+  routes: {
+    ''            : 'index',
+    'patients'    : 'index',
+    'patients/:id': 'show'
+  },
 
   initialize: function() {
     this.patientsView = new Application.Views.Patients.Index({
