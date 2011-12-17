@@ -15,7 +15,6 @@ src_files:
   - public/javascripts/lib/jquery-1.7.1.js
   - public/javascripts/lib/underscore.js
   - public/javascripts/lib/backbone.js
-  - public/javascripts/configurations.js
   - public/javascripts/boot/initialize.js
   - public/javascripts/config/*.js
   - public/javascripts/app/**/*.js
