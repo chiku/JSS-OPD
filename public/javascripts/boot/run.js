@@ -1,8 +1,8 @@
 jQuery(function() {
-  var mainContainer = jQuery('body div[role="main"]');
-  jQuery('<section>', { 'id': Application.Configuration.Selectors.viaId.patients}).appendTo(mainContainer);
-  jQuery('<section>', { 'id': Application.Configuration.Selectors.viaId.patientDetails}).appendTo(mainContainer);
+  var selectors = Application.Configuration.Selectors;
+  var mainContainer = jQuery(selectors.main);
+  jQuery('<section>', { 'id': selectors.patients.replace('#', '')}).appendTo(mainContainer);
+  jQuery('<section>', { 'id': selectors.patientDetails.replace('#', '')}).appendTo(mainContainer);
 
   Application.initialize();
 });
-

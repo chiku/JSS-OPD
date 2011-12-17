@@ -6,7 +6,7 @@ Application.Views.Patients.Index = Backbone.View.extend({
   className: 'patient',
 
   template: function() {
-    return _.template(jQuery("#template-patient").html())
+    return _.template(jQuery(Application.Configuration.Selectors.templates.patients).html())
   },
 
   initialize: function(options) {
@@ -27,7 +27,7 @@ Application.Views.Patients.Index = Backbone.View.extend({
   },
 
   attachContentToCleanContainer: function() {
-    jQuery('#patients-container')
+    jQuery(Application.Configuration.Selectors.patients)
       .empty()
       .append(this.render().el);
 
