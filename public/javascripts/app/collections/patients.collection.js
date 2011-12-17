@@ -14,3 +14,4 @@ Application.Collections.Patients = Backbone.Collection.extend({
   }
 });
 
+Application.collections.Patients = new Application.Collections.Patients;

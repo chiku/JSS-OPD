@@ -3,6 +3,8 @@ var Application = {
 
   Collections: {},
 
+  collections: {},
+
   Routers: {},
 
   Views: {},
@@ -16,6 +18,6 @@ var Application = {
   initialize: function() {
     new Application.Routers.Patients();
     Backbone.history.start();
+    Application.collections.Patients.fetch();
   }
 };
-

@@ -1,15 +1,15 @@
 Application.Views.Patients = Application.Views.Patients || {};
 
 Application.Views.Patients.Index = Backbone.View.extend({
-  el: '#' + Application.Configuration.Selectors.viaId.patients,
+  tagName: 'section',
+  className: 'patient',
 
   initialize: function(options) {
-    this.patients = options.collection;
-    this.render(options.collection);
+    this.collection.bind('reset', this.render, this);
   },
 
   render: function() {
-    _(this.patients).each(function(patient) {
+    this.collection.each(function(patient) {
       this.createNodeFor(patient);
     }, this);
 
@@ -18,19 +18,24 @@ Application.Views.Patients.Index = Backbone.View.extend({
 
   createNodeFor: function(patient) {
     var template = _.template(
-      "<div class='patient'>" +
          "<div class='patient-name'> <%= patientName %> </div>" +
          "<div class='patient-more-info'>" +
            "<div class='doctor-name'> <%= doctorName %> </div>" +
            "<div class='patient-id'> <%= patientId %> </div>" +
-         "</div>" +
-      "</div>");
+         "</div>");
 
     jQuery(template({
       patientName: patient.get('name'),
       doctorName: patient.get('doctor_name'),
       patientId: patient.get('id')
     })).appendTo(this.el);
+  },
+
+  attachContentToCleanContainer: function() {
+    jQuery('#patients-container')
+      .empty()
+      .append(this.render().el);
+
+    return this;
   }
 });
-
