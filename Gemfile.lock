@@ -4,6 +4,7 @@ GEM
     backports (2.3.0)
     childprocess (0.2.3)
       ffi (~> 1.0.6)
+    cmdparse (2.0.3)
     diff-lcs (1.1.3)
     eventmachine (0.12.10)
     ffi (1.0.11)
@@ -13,7 +14,12 @@ GEM
       rspec (>= 1.3.1)
       selenium-webdriver (>= 0.1.3)
     jasmine-core (1.1.0)
+    juicer (1.0.13)
+      cmdparse
+      nokogiri (>= 1.5.0)
+      rubyzip
     multi_json (1.0.4)
+    nokogiri (1.5.0)
     rack (1.3.5)
     rack-protection (1.1.4)
       rack
@@ -52,6 +58,7 @@ PLATFORMS
 
 DEPENDENCIES
   jasmine
+  juicer
   rake
   rspec
   sinatra
