@@ -1,0 +1,62 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>
+    OpenMRS spike using backbone.js
+  </title>
+  <meta name="description" content="OpenMRS backbone.js spike">
+  <meta name="author" content="Chirantan Mitra">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="stylesheet" href="stylesheets/all.min.css">
+
+  <script src="javascripts/lib/modernizr.min.js"></script>
+  <script src="javascripts/lib/respond.min.js"></script>
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <div role="main">
+  </div>
+
+  <footer>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="javascripts/lib/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.2.2/underscore-min.js"></script>
+  <script>window._ || document.write('<script src="javascripts/lib/underscore.min.js"><\/script>')</script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+  <script>window.JSON || document.write('<script src="javascripts/lib/json2.js"><\/script>')</script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.5.3/backbone-min.js"></script>
+  <script>window.Backbone || document.write('<script src="javascripts/lib/backbone.js"><\/script>')</script>
+
+  <script src="javascripts/all.min.js"></script>
+
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  <script type="text/template" id="template-patient">
+    <div class='patient-name'><%= name %> </div>
+      <div class='patient-more-info'>
+        <div class='doctor-name'> <%= doctor_name %> </div>
+        <div class='patient-id'> <%= id %> </div>
+      </div>
+    </div>
+  </script>
+
+</body>
+</html>
