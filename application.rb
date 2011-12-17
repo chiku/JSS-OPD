@@ -8,10 +8,15 @@ MODEL_FILES.each {|file| require file }
 
 module PatientsManagament
   class Application < Sinatra::Base
-    configure :development do
+    configure :development, :test do
       register Sinatra::Reloader
       MODEL_FILES.each {|file| puts file }
       MODEL_FILES.each {|file| also_reload file }
+    end
+
+    index_file = 'index.html'
+    configure :production do
+      index_file = 'index.min.html'
     end
 
     use Rack::Auth::Basic, "Restricted Area" do |username, password|
@@ -19,7 +24,7 @@ module PatientsManagament
     end
 
     get "/" do
-      File.read(File.join('public', 'index.html'))
+      File.read(File.join('public', index_file))
     end
 
     get "/patients.json" do
