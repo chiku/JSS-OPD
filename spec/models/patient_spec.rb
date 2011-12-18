@@ -36,7 +36,7 @@ describe Patient do
     end
 
     it "has a sex" do
-      ['M', 'F'].should be_include(decoded_json['sex'])
+      ['M', 'F'].should include(decoded_json['sex'])
     end
 
     it "has an appointment time" do
