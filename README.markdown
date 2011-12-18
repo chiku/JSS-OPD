@@ -8,11 +8,23 @@ Steps to get the application running
 
 * git clone the repository
 
-* From the root directory of the project run these command
+* Install dependencies by running these commands from the root directory of the project. Running bundle is a one time thing. Re-run bundle when the file Gemfile changes.
 
 ``` shell
   gem install bundler
   bundle install
+```
+
+* If you want to minify javascript and stylesheet files on your local box. This is a one-time step. See 'Minify assets' for more details. (Optional step)
+
+``` shell
+  juicer install yui_compressor
+  juicer install jslint
+```
+
+* Bring up the server in development mode
+
+``` shell
   rackup
 ```
 
@@ -20,15 +32,35 @@ Steps to get the application running
 
 *Note*
 
-_Running bundle is a one time thing. Re-run bundle when the file Gemfile changes_
+Run under production environment
+--------------------------------
 
-Steps to run tests
-----------------
+* Ensure that assets are minified. See 'Minify assets' for more details.
+
+* Bring up the server in production mode
+
+``` shell
+  rackup -E production
+```
+
+* Visit http://localhost:9292
+
+Run tests
+---------
 
 * From the root directory of the project run these commands
 
 ``` shell
-  gem install bundler # if you haven't already install bundler
-  bundle install # if you haven't already run bundle
   rake
+```
+
+Minify assets
+-------------
+
+* We are using juicer to minify assets. This internally uses YUI-compressor. 'java' should be available in your path for this to work.
+
+* From the root directory of the project run
+
+``` shell
+  rake minify
 ```
