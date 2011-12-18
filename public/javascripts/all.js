@@ -9,6 +9,7 @@
  * @depends app/routers/patients.router.js
  * @depends app/views/patients.index.js
  * @depends app/views/patient.info.js
+ * @depends app/views/patient.show.js
 
  * @depends boot/run.js
  */

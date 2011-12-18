@@ -1,12 +1,14 @@
 require 'json'
 
 class Patient
-  attr_reader :id, :name, :doctor_name
+  attr_reader :id, :name, :doctor_name, :sex, :appointment_time
 
   def initialize(id)
-    @id = id
-    @name = "Patient Name #{id}"
-    @doctor_name = "Doctor Name #{id}"
+    @id               = id
+    @name             = "Patient Name #{id}"
+    @doctor_name      = "Doctor Name #{id}"
+    @sex              = (id % 2).zero? ? 'M' : 'F'
+    @appointment_time = Time.now
   end
 
   def self.find(id)
@@ -22,7 +24,13 @@ class Patient
   end
 
   def to_json(*args)
-    {:name => name, :doctor_name => doctor_name, :id => id}.to_json
+    {
+      :name             => name,
+      :doctor_name      => doctor_name,
+      :id               => id,
+      :sex              => sex,
+      :appointment_time => appointment_time
+    }.to_json
   end
 end
 

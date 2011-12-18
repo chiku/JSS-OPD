@@ -5,18 +5,27 @@ Application.Views.Patients.Info = Backbone.View.extend({
 
   className: 'patient',
 
+  events: {
+    'click': 'showDetails'
+  },
+
   template: function() {
     return _.template(jQuery(Application.Configuration.Selectors.templates.patient).html())
   },
 
   initialize: function(options) {
     this.model.bind('change', this.render, this);
+    this.detailedView = new Application.Views.Patients.Show({model: this.model});
   },
 
   render: function() {
     var patientHtml = this.template()(this.model.toJSON());
-    $(this.el).html(patientHtml);
+    jQuery(this.el).html(patientHtml);
 
     return this;
+  },
+
+  showDetails: function() {
+    this.detailedView.attachContentToCleanContainer();
   }
 });

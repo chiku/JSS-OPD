@@ -22,17 +22,17 @@ ol li {
   text-align: center;
 }
 
-.patient {
+#patients-container .patient {
   font-size: 0.9em;
 }
 
-.patient-name {
+#patients-container .patient-name {
   float: left;
   width: 50%;
   padding: 2px;
 }
 
-.doctor-name {
+#patients-container .doctor-name {
   float: left;
   width: 30%;
   padding: 2px;
@@ -40,7 +40,7 @@ ol li {
   font-style: bold;
 }
 
-.patient-id {
+#patients-container .patient-id {
   float: left;
   width: 10%;
   padding: 2px;
@@ -51,5 +51,9 @@ ol li {
 #patient-details-container {
   width: 45%;
   float: left;
+}
+
+#patient-details-container .patient {
+  font-size: 1.3em;
 }
 

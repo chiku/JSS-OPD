@@ -6,6 +6,7 @@ Application.Configuration.Selectors = {
 
   templates: {
     patients:       '#template-patients',
-    patient:        '#template-patient'
+    patient:        '#template-patient',
+    patientDetails: '#template-patient-details'
   }
 };

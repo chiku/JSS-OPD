@@ -34,6 +34,14 @@ describe Patient do
     it "has an ID" do
       decoded_json['id'].should == patient.id
     end
+
+    it "has a sex" do
+      ['M', 'F'].should be_include(decoded_json['sex'])
+    end
+
+    it "has an appointment time" do
+      decoded_json['appointment_time'].should_not be_empty
+    end
   end
 
   it "can be found by ID" do

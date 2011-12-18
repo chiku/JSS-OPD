@@ -61,6 +61,7 @@
   <script src="javascripts/app/routers/patients.router.js"></script>
   <script src="javascripts/app/views/patients.index.js"></script>
   <script src="javascripts/app/views/patient.info.js"></script>
+  <script src="javascripts/app/views/patient.show.js"></script>
 
   <script src="javascripts/boot/run.js"></script>
   <!-- end scripts -->
@@ -84,6 +85,14 @@
         <div class='patient-id'> <%= id %> </div>
       </div>
     </div>
+  </script>
+
+  <script type="text/template" id="template-patient-details">
+    <li class='patient-name'>Name: <%= name %> </li>
+    <li class='patient-sex'>Sex: <%= sex %> </li>
+    <li class='doctor-name'>Doctor&rsquo;s Name: <%= doctor_name %> </li>
+    <li class='patient-id'>ID: <%= id %> </li>
+    <li class='appointment-time'>Appointment Time: <%= appointment_time %></li>
   </script>
 
 </body>
