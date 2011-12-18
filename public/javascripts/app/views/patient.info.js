@@ -15,7 +15,7 @@ Application.Views.Patients.Info = Backbone.View.extend({
 
   initialize: function(options) {
     this.model.bind('change', this.render, this);
-    this.detailedView = new Application.Views.Patients.Show({model: this.model});
+    this.detailedView = new Application.Views.Patients.Show({model: this.model.clone()});
   },
 
   render: function() {
@@ -26,7 +26,6 @@ Application.Views.Patients.Info = Backbone.View.extend({
   },
 
   showDetails: function() {
-    this.detailedView.model.set(this.model.attributes);
-    this.detailedView.model.change();
+    this.detailedView.attachContentToCleanContainer();
   }
 });

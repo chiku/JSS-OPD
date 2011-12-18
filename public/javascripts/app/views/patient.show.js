@@ -6,11 +6,12 @@ Application.Views.Patients.Show = Backbone.View.extend({
   className: 'patient-details',
 
   template: function() {
-    return _.template(jQuery(Application.Configuration.Selectors.templates.patientDetails).html())
+    return _.template(jQuery(this.selectors.templates.patientDetails).html())
   },
 
   initialize: function(options) {
     this.model.bind('change', this.attachContentToCleanContainer, this);
+    this.selectors = Application.Configuration.Selectors;
   },
 
   render: function() {
@@ -21,7 +22,7 @@ Application.Views.Patients.Show = Backbone.View.extend({
   },
 
   attachContentToCleanContainer: function() {
-    jQuery(Application.Configuration.Selectors.patientDetails)
+    jQuery(this.selectors.patientDetails)
       .empty()
       .append(this.render().el);
 
