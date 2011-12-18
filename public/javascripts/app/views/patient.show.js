@@ -10,7 +10,7 @@ Application.Views.Patients.Show = Backbone.View.extend({
   },
 
   initialize: function(options) {
-    this.model.bind('change', this.render, this);
+    this.model.bind('change', this.attachContentToCleanContainer, this);
   },
 
   render: function() {

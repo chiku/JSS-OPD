@@ -26,6 +26,7 @@ Application.Views.Patients.Info = Backbone.View.extend({
   },
 
   showDetails: function() {
-    this.detailedView.attachContentToCleanContainer();
+    this.detailedView.model.set(this.model.attributes);
+    this.detailedView.model.change();
   }
 });
