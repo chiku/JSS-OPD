@@ -8,7 +8,7 @@ class Patient
     @name             = "Patient Name #{id}"
     @doctor_name      = "Doctor Name #{id}"
     @sex              = (id % 2).zero? ? 'M' : 'F'
-    @appointment_time = Time.now
+    @appointment_time = Time.now - id * 1800
   end
 
   def self.find(id)
@@ -29,8 +29,7 @@ class Patient
       :doctor_name      => doctor_name,
       :id               => id,
       :sex              => sex,
-      :appointment_time => appointment_time
+      :appointment_time => appointment_time.strftime("%d/%b/%Y at %I:%M %p")
     }.to_json
   end
 end
-
