@@ -1,3 +1,13 @@
+ul li {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+ol li {
+  list-style-image: none;
+  list-style-type: none;
+}
+
 .clear-left {
   clear: left;
 }
@@ -6,21 +16,20 @@
   color: #cc1122
 }
 
-#patients-container {
+#appointments {
   width: 50%;
   float: left;
   text-align: center;
 }
 
 .patient {
-  width: 50%;
+  font-size: 0.9em;
 }
 
 .patient-name {
   float: left;
   width: 50%;
   padding: 2px;
-  font-size: 0.9em;
 }
 
 .doctor-name {

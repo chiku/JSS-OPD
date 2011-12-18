@@ -3,10 +3,10 @@ Application.Views.Patients = Application.Views.Patients || {};
 Application.Views.Patients.Index = Backbone.View.extend({
   tagName: 'section',
 
-  className: 'patient',
+  className: 'patients',
 
   template: function() {
-    return _.template(jQuery(Application.Configuration.Selectors.templates.patients).html())
+    return _.template(jQuery(Application.Configuration.Selectors.templates.patients).html());
   },
 
   initialize: function(options) {
@@ -14,20 +14,18 @@ Application.Views.Patients.Index = Backbone.View.extend({
   },
 
   render: function() {
+    jQuery(this.el).html(this.template({}));
+
     this.collection.each(function(patient) {
-      this.createNodeFor(patient);
+      var view = new Application.Views.Patients.Info({model: patient});
+      jQuery(Application.Configuration.Selectors.patients).append(view.render().el);
     }, this);
 
     return this;
   },
 
-  createNodeFor: function(patient) {
-    var patientHtml = this.template()(patient.toJSON());
-    jQuery(patientHtml).appendTo(this.el);
-  },
-
   attachContentToCleanContainer: function() {
-    jQuery(Application.Configuration.Selectors.patients)
+    jQuery(Application.Configuration.Selectors.appointments)
       .empty()
       .append(this.render().el);
 

@@ -3,6 +3,7 @@ describe("Patients", function() {
     beforeEach(function() {
       this.router = new Application.Routers.Patients();
       this.routeSpy = jasmine.createSpy('routeSpy');
+      spyOn(Application.Views.Patients.Index.prototype, "attachContentToCleanContainer");
 
       try {
         Backbone.history.start({silent:true, pushState:true});
