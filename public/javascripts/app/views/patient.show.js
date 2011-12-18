@@ -1,4 +1,4 @@
-Application.Views.Patients = Application.Views.Patients || {};
+Application.Views.Patients || (Application.Views.Patients = {});
 
 Application.Views.Patients.Show = Backbone.View.extend({
   tagName: 'ul',

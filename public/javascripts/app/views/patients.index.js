@@ -1,4 +1,4 @@
-Application.Views.Patients = Application.Views.Patients || {};
+Application.Views.Patients || (Application.Views.Patients = {});
 
 Application.Views.Patients.Index = Backbone.View.extend({
   tagName: 'section',
@@ -18,7 +18,9 @@ Application.Views.Patients.Index = Backbone.View.extend({
     jQuery(this.el).html(this.template({}));
 
     this.collection.each(function(patient) {
-      var view = new Application.Views.Patients.Info({model: patient});
+      var view = new Application.Views.Patients.Info({
+        model: patient
+      });
       jQuery(this.selectors.patients).append(view.render().el);
     }, this);
 

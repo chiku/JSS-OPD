@@ -1,4 +1,4 @@
-Application.Views.Patients = Application.Views.Patients || {};
+Application.Views.Patients || (Application.Views.Patients = {});
 
 Application.Views.Patients.Info = Backbone.View.extend({
   tagName: 'li',
@@ -15,7 +15,9 @@ Application.Views.Patients.Info = Backbone.View.extend({
 
   initialize: function(options) {
     this.model.bind('change', this.render, this);
-    this.detailedView = new Application.Views.Patients.Show({model: this.model.clone()});
+    this.detailedView = new Application.Views.Patients.Show({
+      model: this.model
+    });
   },
 
   render: function() {
