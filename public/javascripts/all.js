@@ -5,7 +5,6 @@
  * @depends config/urls.js
 
  * @depends app/models/patient.js
- * @depends app/models/detailed.patient.js
  * @depends app/collections/patients.collection.js
  * @depends app/routers/patients.router.js
  * @depends app/views/patients.index.js

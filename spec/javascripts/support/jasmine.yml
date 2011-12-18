@@ -17,7 +17,6 @@ src_files:
   - public/javascripts/lib/backbone.js
   - public/javascripts/boot/initialize.js
   - public/javascripts/config/*.js
-  - public/javascripts/app/models/patient.js
   - public/javascripts/app/**/*.js
 
 # stylesheets
