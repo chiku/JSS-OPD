@@ -9,6 +9,14 @@ Application.Collections.Patients = Backbone.Collection.extend({
 
   comparator: function(patient) {
     return patient.get("name");
+  },
+
+  reorderBy: function(field) {
+    this.comparator = function(patient) {
+      return patient.get(field);
+    };
+    this.sort();
+    return this;
   }
 });
 
