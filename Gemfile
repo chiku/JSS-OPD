@@ -9,6 +9,7 @@ group :development do
 end
 
 group :test do
+  gem "ffi",     "=1.0.9"
   gem "rspec"
   gem "jasmine", :require => false
 end
