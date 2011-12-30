@@ -10,7 +10,6 @@ var Application = {
   Views: {},
 
   Configuration: {
-    Routes: {},
     Urls: {},
     Selectors: {}
   },
