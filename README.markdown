@@ -1,3 +1,9 @@
+# This repository is dead. #
+
+# Please refer to the actual work at https://github.com/chiku/JSS-OPD/ #
+
+====================================================================
+
 A spike to test suitability of backbone for openMRS
 ---------------------------------------------------
 
