@@ -15,7 +15,7 @@ module PatientsManagament
     end
 
     get "/" do
-      File.read(File.join('public', index_file))
+      File.read(File.join('public', 'index.html'))
     end
 
     get "/patients.json" do
