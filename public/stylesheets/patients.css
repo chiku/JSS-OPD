@@ -26,6 +26,11 @@ ol li {
   text-align: center;
 }
 
+#pateints-sort {
+  width: 40%;
+  font-size: 0.8em;
+}
+
 #patients-container .patient {
   font-size: 0.9em;
 }
