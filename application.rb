@@ -22,10 +22,5 @@ module PatientsManagament
       content_type 'application/json'
       ({:patients => Patient.all}).to_json
     end
-
-    get "/patients/:id.json" do
-      content_type 'application/json'
-      Patient.find(params[:id]).to_json
-    end
   end
 end
