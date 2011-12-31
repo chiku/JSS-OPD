@@ -6,7 +6,7 @@ describe Patient do
   end
 
   it "has a name" do
-    patient.name.should == "Patient Name 10"
+    patient.name.should == "Patient Name 0"
   end
 
   it "has a doctor" do

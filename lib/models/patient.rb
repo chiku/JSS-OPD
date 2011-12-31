@@ -5,7 +5,7 @@ class Patient
 
   def initialize(id)
     @id               = id
-    @name             = "Patient Name #{id}"
+    @name             = "Patient Name #{10 - id}"
     @doctor_name      = "Doctor Name #{id}"
     @sex              = (id % 2).zero? ? 'M' : 'F'
     @appointment_time = Time.now - id * 1800
