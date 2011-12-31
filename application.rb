@@ -19,10 +19,6 @@ module PatientsManagament
       index_file = 'index.min.html'
     end
 
-    use Rack::Auth::Basic, "Restricted Area" do |username, password|
-      [username, password] == ['developer', '!abcd1234']
-    end
-
     get "/" do
       File.read(File.join('public', index_file))
     end
