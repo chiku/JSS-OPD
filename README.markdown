@@ -25,6 +25,12 @@ Steps to get the application running
 Run under production environment
 --------------------------------
 
+* Switch to poduction branch
+
+``` shell
+  git checkout production
+```
+
 * Ensure that assets are minified. See 'Minify assets' for more details.
 
 * Bring up the server in production mode
