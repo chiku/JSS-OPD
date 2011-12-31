@@ -1,4 +1,4 @@
-Application.Routers.Patients = Backbone.Router.extend({
+Application.Router = Backbone.Router.extend({
   routes: {
     ''            : 'index',
     'patients'    : 'index',
