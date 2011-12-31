@@ -30,8 +30,6 @@ Steps to get the application running
 
 * Visit http://localhost:9292
 
-*Note*
-
 Run under production environment
 --------------------------------
 
