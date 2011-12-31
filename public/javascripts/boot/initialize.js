@@ -2,10 +2,9 @@ var Application = {
   Models: {},
 
   Collections: {},
-
   collections: {},
 
-  Routers: {},
+  Router: undefined,
 
   Views: {
     Patients: {}
@@ -17,7 +16,7 @@ var Application = {
   },
 
   initialize: function() {
-    new Application.Routers.Patients();
+    new Application.Router();
     Backbone.history.start();
     Application.collections.patients.fetch();
   }
