@@ -1,5 +1,3 @@
-Application.Views.Patients || (Application.Views.Patients = {});
-
 Application.Views.Patients.Sort = Backbone.View.extend({
   el: function() {
     return $(Application.Configuration.Selectors.patientsSort);

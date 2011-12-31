@@ -7,7 +7,9 @@ var Application = {
 
   Routers: {},
 
-  Views: {},
+  Views: {
+    Patients: {}
+  },
 
   Configuration: {
     Urls: {},
