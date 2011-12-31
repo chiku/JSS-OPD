@@ -14,11 +14,6 @@ module PatientsManagament
       MODEL_FILES.each {|file| also_reload file }
     end
 
-    index_file = 'index.html'
-    configure :production do
-      index_file = 'index.min.html'
-    end
-
     get "/" do
       File.read(File.join('public', index_file))
     end
