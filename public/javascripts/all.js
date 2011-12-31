@@ -10,6 +10,7 @@
  * @depends app/views/patients.index.js
  * @depends app/views/patient.info.js
  * @depends app/views/patient.show.js
+ * @depends app/views/patients.sort.js
 
  * @depends boot/run.js
  */

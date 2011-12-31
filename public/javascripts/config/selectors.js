@@ -3,6 +3,7 @@ Application.Configuration.Selectors = {
   appointments:     '#appointments',
   patients:         '#patients-container',
   patientDetails:   '#patient-details-container',
+  pateintsSort:     '#pateints-sort',
 
   templates: {
     patients:       '#template-patients',

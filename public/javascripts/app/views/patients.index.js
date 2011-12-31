@@ -12,6 +12,10 @@ Application.Views.Patients.Index = Backbone.View.extend({
   initialize: function(options) {
     this.collection.bind('reset', this.render, this);
     this.selectors = Application.Configuration.Selectors;
+
+    new Application.Views.Patients.Sort({
+      collection: this.collection
+    });
   },
 
   render: function() {
