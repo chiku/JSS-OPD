@@ -25,7 +25,7 @@ Steps to get the application running
 Run under production environment
 --------------------------------
 
-* Switch to poduction branch
+* Switch to production branch
 
 ``` shell
   git checkout production
