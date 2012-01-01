@@ -1,5 +1,3 @@
-Application.Views.Patients || (Application.Views.Patients = {});
-
 Application.Views.Patients.Info = Backbone.View.extend({
   tagName: 'li',
 

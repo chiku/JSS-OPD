@@ -1,5 +1,3 @@
-Application.Views.Patients || (Application.Views.Patients = {});
-
 Application.Views.Patients.Index = Backbone.View.extend({
   tagName: 'section',
 

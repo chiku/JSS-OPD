@@ -1,7 +1,7 @@
 describe("Patients", function() {
   describe("router", function() {
     beforeEach(function() {
-      this.router = new Application.Routers.Patients();
+      this.router = new Application.Router();
       this.routeSpy = jasmine.createSpy('routeSpy');
       spyOn(Application.Views.Patients.Index.prototype, "attachContentToCleanContainer");
 
@@ -42,7 +42,7 @@ describe("Patients", function() {
     it("attaches patients details to DOM", function() {
       var fakeSever = createFakeSuccessServer();
       var attachContentStub = spyOn(Application.Views.Patients.Index.prototype, "attachContentToCleanContainer");
-      var router = new Application.Routers.Patients();
+      var router = new Application.Router();
 
       router.index();
       fakeSever.respond();

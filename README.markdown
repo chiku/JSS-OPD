@@ -4,22 +4,14 @@ An application for JSS using openMRS rest services
 Steps to get the application running
 ------------------------------------
 
-* Install ruby preferably version 1.9.2+. Ensure that ruby is in your path
+* Install ruby preferably version 1.9.2+. Ensure that ruby is in your path.
 
 * git clone the repository
 
-* Install dependencies by running these commands from the root directory of the project. Running bundle is a one time thing. Re-run bundle when the file Gemfile changes.
+* Run the following from the root of your project.
 
 ``` shell
-  gem install bundler
-  bundle install
-```
-
-* If you want to minify javascript and stylesheet files on your local box. This is a one-time step. See 'Minify assets' for more details. (Optional step)
-
-``` shell
-  juicer install yui_compressor
-  juicer install jslint
+  gem install rack
 ```
 
 * Bring up the server in development mode
@@ -32,6 +24,12 @@ Steps to get the application running
 
 Run under production environment
 --------------------------------
+
+* Switch to production branch
+
+``` shell
+  git checkout production
+```
 
 * Ensure that assets are minified. See 'Minify assets' for more details.
 
@@ -49,13 +47,33 @@ Run tests
 * From the root directory of the project run these commands
 
 ``` shell
-  rake
+  rackup
+```
+
+* Visit http://localhost:9292/spec/spec.runner.html
+
+(Alternately)
+
+* From the root directory of the project run these commands
+
+``` shell
+  gem install rspec jasmine
+  rake spec
 ```
 
 Minify assets
 -------------
 
 * We are using juicer to minify assets. This internally uses YUI-compressor. 'java' should be available in your path for this to work.
+
+
+* If you want to install tools to minify javascript and stylesheet files on your local box, run the following command. This is a one-time step.
+
+``` shell
+  gem install juicer
+  juicer install yui_compressor
+  juicer install jslint
+```
 
 * From the root directory of the project run
 
