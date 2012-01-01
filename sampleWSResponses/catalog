@@ -1,0 +1,868 @@
+//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/catalog
+//Catalog of all possible calls
+{
+    "catalog": [{
+        "name": "Cohort",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "voided", "memberIds", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "memberIds", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "CohortMember",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+        "representations": [{
+            "name": "ref",
+            "properties": ["display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["patient", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["patient", "links"]
+        }]
+    },
+    {
+        "name": "Concept",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "retired", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "datatype", "conceptClass", "set", "version", "retired", "names", "descriptions", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "datatype", "conceptClass", "set", "version", "retired", "names", "descriptions", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "ConceptClass",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "retired", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "ConceptDatatype",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "hl7Abbreviation", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "hl7Abbreviation", "retired", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "ConceptDescription",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "description", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "description", "locale", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "description", "locale", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "ConceptName",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "locale", "localePreferred", "conceptNameType", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "locale", "localePreferred", "conceptNameType", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "Encounter",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter?patient",
+            "description": "Fetch all non-retired encounters for a given patient"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "encounterDatetime", "patient", "location", "form", "encounterType", "provider", "obs", "orders", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "encounterDatetime", "patient", "location", "form", "encounterType", "provider", "obs", "orders", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "EncounterType",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "retired", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "HL7Message",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "messageState", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "source", "sourceKey", "data", "messageState", "links"]
+        }]
+    },
+    {
+        "name": "Location",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/location",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/location",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "address1", "address2", "cityVillage", "stateProvince", "country", "postalCode", "latitude", "longitude", "countyDistrict", "address3", "address4", "address5", "address6", "tags", "parentLocation", "childLocations", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "address1", "address2", "cityVillage", "stateProvince", "country", "postalCode", "latitude", "longitude", "countyDistrict", "address3", "address4", "address5", "address6", "tags", "parentLocation", "childLocations", "retired", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "Obs",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?patient",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?encounter",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/obs",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/obs",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "person", "concept", "value", "obsDatetime", "accessionNumber", "obsGroup", "groupMembers", "comment", "location", "order", "encounter", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "person", "concept", "value", "obsDatetime", "accessionNumber", "obsGroup", "groupMembers", "comment", "location", "order", "encounter", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "Patient",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patient",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "identifiers", "person", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "identifiers", "person", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "PatientIdentifier",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "identifier", "identifierType", "location", "preferred", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "identifier", "identifierType", "location", "preferred", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "PatientIdentifierType",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "name", "description", "format", "formatDescription", "required", "checkDigit", "validator", "locationBehavior", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "name", "description", "format", "formatDescription", "required", "checkDigit", "validator", "locationBehavior", "retired", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "Person",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "gender", "age", "birthdate", "birthdateEstimated", "dead", "deathDate", "causeOfDeath", "preferredName", "preferredAddress", "attributes", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "gender", "age", "birthdate", "birthdateEstimated", "dead", "deathDate", "causeOfDeath", "preferredName", "preferredAddress", "names", "addresses", "attributes", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "PersonAddress",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "preferred", "address1", "address2", "cityVillage", "stateProvince", "country", "postalCode", "countyDistrict", "address3", "address4", "address5", "address6", "startDate", "endDate", "latitude", "longitude", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "preferred", "address1", "address2", "cityVillage", "stateProvince", "country", "postalCode", "latitude", "longitude", "countyDistrict", "address3", "address4", "address5", "address6", "startDate", "endDate", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "PersonAttribute",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "value", "attributeType", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "value", "attributeType", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "PersonName",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "givenName", "middleName", "familyName", "familyName2", "voided", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "givenName", "middleName", "familyName", "familyName2", "preferred", "prefix", "familyNamePrefix", "familyNameSuffix", "degree", "voided", "auditInfo", "links"]
+        }]
+    },
+    {
+        "name": "User",
+        "operations": [{
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user?q",
+            "description": "Fetch all non-retired that match this parameter"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}",
+            "description": "Fetch by unique uuid"
+        },
+        {
+            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user",
+            "description": "Fetch all non-retired"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/user",
+            "description": "Create with properties in request"
+        },
+        {
+            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}",
+            "description": "Edit with given uuid, only modifying properties in request"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}?!purge",
+            "description": "Delete this object from the database"
+        },
+        {
+            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}?purge",
+            "description": "Delete this object from the database"
+        }],
+        "url": "NEED-TO-CONFIGURE/ws/rest/v1/user",
+        "representations": [{
+            "name": "ref",
+            "properties": ["uuid", "display", "retired", "links"]
+        },
+        {
+            "name": "default",
+            "properties": ["uuid", "username", "systemId", "userProperties", "person", "roles", "retired", "links"]
+        },
+        {
+            "name": "full",
+            "properties": ["uuid", "username", "systemId", "userProperties", "person", "roles", "proficientLocales", "secretQuestion", "retired", "auditInfo", "links"]
+        }]
+    }]
+}
