@@ -1,0 +1,91 @@
+//Get encounters
+//Examples
+//Get encounters of a patient - This is required for the timeline
+//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/encounter?patient=76b05d34-3309-11e1-9d4c-c588571b8445 
+{
+    "results":
+    [
+        {
+            "uuid":"01edcc40-f804-4c49-9568-c67fcc4b4599",
+            "encounterDatetime":"2011-12-31T00:00:00.000+0530",
+            "patient":
+            {
+                "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
+                "display":"Mr. John D Patient",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "location":
+            {
+                "uuid":"8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+                "display":"Unknown Location",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "form":
+            {
+                "uuid":"76a46e0c-3309-11e1-9d4c-c588571b8445",
+                "display":"Basic Form",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/temp hack/76a46e0c-3309-11e1-9d4c-c588571b8445",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "encounterType":
+            {
+                "uuid":"8d5b27bc-c2cc-11de-8d13-0010c6dffd0f",
+                "display":"ADULTINITIAL",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/encountertype/8d5b27bc-c2cc-11de-8d13-0010c6dffd0f",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "provider":
+            {
+                "uuid":"a5c7293e-9798-484d-a6b9-a6e40f78138b",
+                "display":"A Doctor",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/a5c7293e-9798-484d-a6b9-a6e40f78138b",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "obs":
+            [
+            ],
+            "orders":
+            [
+            ],
+            "voided":false,
+            "links":
+            [
+                {
+                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/encounter/01edcc40-f804-4c49-9568-c67fcc4b4599",
+                    "rel":"self"
+                },
+                {
+                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/encounter/01edcc40-f804-4c49-9568-c67fcc4b4599?v=full",
+                    "rel":"full"
+                }
+            ]
+        }
+    ]
+}

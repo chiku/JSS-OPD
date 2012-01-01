@@ -1,0 +1,78 @@
+//Get observations related to an encounter
+//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/obs?encounter=01edcc40-f804-4c49-9568-c67fcc4b4599
+{
+    "results":
+    [
+        {
+            "uuid":"863bfde2-25b9-4342-bda9-1fc839efea68",
+            "person":
+            {
+                "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
+                "display":"Mr. John D Patient",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "concept":
+            {
+                "uuid":"7650f2ae-3309-11e1-9d4c-c588571b8445",
+                "display":"BANDS",
+                "retired":false,
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/7650f2ae-3309-11e1-9d4c-c588571b8445",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "value":"20.0",
+            "obsDatetime":"2011-12-31T00:00:00.000+0530",
+            "accessionNumber":null,
+            "obsGroup":null,
+            "groupMembers":null,
+            "comment":"",
+            "location":
+            {
+                "uuid":"8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+                "display":"Unknown Location",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "order":null,
+            "encounter":
+            {
+                "uuid":"01edcc40-f804-4c49-9568-c67fcc4b4599",
+                "display":"ADULTINITIAL 31/12/2011",
+                "links":
+                [
+                    {
+                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/encounter/01edcc40-f804-4c49-9568-c67fcc4b4599",
+                        "rel":"self"
+                    }
+                ]
+            },
+            "voided":false,
+            "links":
+            [
+                {
+                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68",
+                    "rel":"self"
+                },
+                {
+                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68?v=full",
+                    "rel":"full"
+                }
+            ]
+        }
+    ]
+}

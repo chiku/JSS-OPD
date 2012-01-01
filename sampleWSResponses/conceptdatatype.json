@@ -1,0 +1,24 @@
+//Get datatype of a concept
+//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f
+//applicable names are available in http://openmrs.senthilvkumar.com/admin/concepts/conceptDatatype.list
+{
+    "uuid":"8d4a4488-c2cc-11de-8d13-0010c6dffd0f",
+    "name":"Numeric",
+    "description":"Numeric value,
+     including integer or float (e.g.,
+     creatinine,
+     weight)",
+    "hl7Abbreviation":"NM",
+    "retired":false,
+    "links":
+    [
+        {
+            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f",
+            "rel":"self"
+        },
+        {
+            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f?v=full",
+            "rel":"full"
+        }
+    ]
+}
