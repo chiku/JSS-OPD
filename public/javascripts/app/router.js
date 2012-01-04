@@ -1,20 +1,20 @@
 Application.Router = Backbone.Router.extend({
   routes: {
     ''            : 'index',
-    'patients'    : 'index',
+    'encounters'  : 'index',
     'patients/:id': 'show'
   },
 
   initialize: function() {
-    this.patientsView = new Application.Views.Patients.Index({
+    this.encountersView = new Application.Views.Encounters.Index({
       collection: Application.collections.patients
     });
   },
 
   index: function() {
-    this.patientsView.attachContentToCleanContainer();
+    this.encountersView.attachContentToCleanContainer();
   },
 
-  show: function(id) {
+  show: function(patientId) {
   }
 });

@@ -49,7 +49,7 @@
     <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
   <![endif]-->
 
-  <script type="text/template" id="template-patients">
+  <script type="text/template" id="template-encounters">
     <h2>List of patients</h2>
     <nav id="patients-sort">
       <a href="#" data-sort-by="name">Name</a>
@@ -58,7 +58,7 @@
     <ol id="patients-container"></ol>
   </script>
 
-  <script type="text/template" id="template-patient">
+  <script type="text/template" id="template-encounter">
     <div class='patient-name clear-both'> <%= name %> </div>
       <div class='patient-more-info clear-both'>
         <div class='doctor-name'> <%= doctor_name %> </div>
@@ -67,7 +67,7 @@
     </div>
   </script>
 
-  <script type="text/template" id="template-patient-details">
+  <script type="text/template" id="template-patient">
     <li class='patient-name'>Name: <%= name %> </li>
     <li class='patient-sex'>Sex: <%= sex %> </li>
     <li class='doctor-name'>Doctor&rsquo;s Name: <%= doctor_name %> </li>
