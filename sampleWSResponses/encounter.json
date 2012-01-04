@@ -1,7 +1,3 @@
-//Get encounters
-//Examples
-//Get encounters of a patient - This is required for the timeline
-//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/encounter?patient=76b05d34-3309-11e1-9d4c-c588571b8445 
 {
     "results":
     [
