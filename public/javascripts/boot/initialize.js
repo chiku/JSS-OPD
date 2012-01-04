@@ -19,6 +19,6 @@ var Application = {
   initialize: function() {
     new Application.Router();
     Backbone.history.start();
-    Application.collections.patients.fetch();
+    Application.collections.encounters.fetch();
   }
 };
