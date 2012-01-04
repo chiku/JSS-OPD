@@ -50,16 +50,7 @@ Run tests
   rackup
 ```
 
-* Visit http://localhost:9292/spec/spec.runner.html
-
-(Alternately)
-
-* From the root directory of the project run these commands
-
-``` shell
-  gem install rspec jasmine
-  rake spec
-```
+* Visit http://localhost:8889
 
 Minify assets
 -------------
