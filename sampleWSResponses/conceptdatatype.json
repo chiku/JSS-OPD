@@ -13,11 +13,11 @@
     "links":
     [
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f",
+            "uri":"http://localhost:8080/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f",
             "rel":"self"
         },
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f?v=full",
+            "uri":"http://localhost:8080/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f?v=full",
             "rel":"full"
         }
     ]

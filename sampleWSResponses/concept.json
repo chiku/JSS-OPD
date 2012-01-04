@@ -14,11 +14,11 @@
         "links":
         [
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445",
+                "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445",
                 "rel":"self"
             },
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445?v=full",
+                "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445?v=full",
                 "rel":"full"
             }
         ]
@@ -30,7 +30,7 @@
         "links":
         [
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/8d4a4c94-c2cc-11de-8d13-0010c6dffd0f",
+                "uri":"http://localhost:8080/ws/rest/v1/conceptdatatype/8d4a4c94-c2cc-11de-8d13-0010c6dffd0f",
                 "rel":"self"
             }
         ]
@@ -42,7 +42,7 @@
         "links":
         [
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/8d491a9a-c2cc-11de-8d13-0010c6dffd0f",
+                "uri":"http://localhost:8080/ws/rest/v1/conceptclass/8d491a9a-c2cc-11de-8d13-0010c6dffd0f",
                 "rel":"self"
             }
         ]
@@ -58,7 +58,7 @@
             "links":
             [
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7681b164-3309-11e1-9d4c-c588571b8445",
                     "rel":"self"
                 }
             ]
@@ -69,7 +69,7 @@
             "links":
             [
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7695e530-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/7695e530-3309-11e1-9d4c-c588571b8445",
                     "rel":"self"
                 }
             ]
@@ -80,7 +80,7 @@
             "links":
             [
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/769349ce-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/names/769349ce-3309-11e1-9d4c-c588571b8445",
                     "rel":"self"
                 }
             ]
@@ -94,7 +94,7 @@
             "links":
             [
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/descriptions/7669c234-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445/descriptions/7669c234-3309-11e1-9d4c-c588571b8445",
                     "rel":"self"
                 }
             ]
@@ -103,11 +103,11 @@
     "links":
     [
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445",
+            "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445",
             "rel":"self"
         },
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445?v=full",
+            "uri":"http://localhost:8080/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445?v=full",
             "rel":"full"
         }
     ]
