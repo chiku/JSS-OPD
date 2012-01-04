@@ -1,23 +1,23 @@
-Application.Collections.Patients = Backbone.Collection.extend({
-  model: Application.Models.Patient,
+Application.Collections.Encounters = Backbone.Collection.extend({
+  model: Application.Models.Encounter,
 
-  url: Application.Configuration.Urls.patients,
+  url: Application.Configuration.Urls.encounters,
 
   parse: function(response) {
-    return response.patients;
+    return response.results;
   },
 
-  comparator: function(patient) {
-    return patient.get("name");
+  comparator: function(encounter) {
+    return encounter.get("name");
   },
 
   reorderBy: function(field) {
-    this.comparator = function(patient) {
-      return patient.get(field);
+    this.comparator = function(encounter) {
+      return encounter.get(field);
     };
     this.sort();
     return this;
   }
 });
 
-Application.collections.patients = new Application.Collections.Patients;
+Application.collections.encounters = new Application.Collections.Encounters;
