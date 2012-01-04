@@ -1,7 +1,7 @@
 Application.Views.Patients.Show = Backbone.View.extend({
   tagName: 'ul',
 
-  className: 'patient-details',
+  className: 'patient',
 
   template: function() {
     return _.template(jQuery(this.selectors.templates.patientDetails).html())

@@ -1,7 +1,7 @@
-Application.Views.Patients.Info = Backbone.View.extend({
+Application.Views.Encounters.Show = Backbone.View.extend({
   tagName: 'li',
 
-  className: 'patient',
+  className: 'encounter',
 
   events: {
     'click': 'showDetails'

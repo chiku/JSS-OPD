@@ -1,3 +1,4 @@
 Application.Configuration.Urls = {
-  'patients': '/patients.json'
+  'encounters': '/encounter.json',
+  'patients'  : '/patient.json'
 };

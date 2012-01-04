@@ -6,8 +6,8 @@ Application.Configuration.Selectors = {
   patientsSort:     '#patients-sort',
 
   templates: {
-    patients:       '#template-patients',
-    patient:        '#template-patient',
-    patientDetails: '#template-patient-details'
+    encounters:     '#template-encounters',
+    encounter:      '#template-encounter',
+    patient:        '#template-patient'
   }
 };

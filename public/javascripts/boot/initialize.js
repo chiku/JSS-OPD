@@ -7,6 +7,7 @@ var Application = {
   Router: undefined,
 
   Views: {
+    Encounters: {},
     Patients: {}
   },
 
