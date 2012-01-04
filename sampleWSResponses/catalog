@@ -4,34 +4,34 @@
     "catalog": [{
         "name": "Cohort",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/cohort?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/cohort/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+            "name": "GET http://localhost:8080/ws/rest/v1/cohort",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+            "name": "POST http://localhost:8080/ws/rest/v1/cohort",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/cohort/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/cohort/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/cohort/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/cohort",
+        "url": "http://localhost:8080/ws/rest/v1/cohort",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -48,30 +48,30 @@
     {
         "name": "CohortMember",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+            "name": "GET http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+            "name": "POST http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/cohort/{parentUuid}/members",
+        "url": "http://localhost:8080/ws/rest/v1/cohort/{parentUuid}/members",
         "representations": [{
             "name": "ref",
             "properties": ["display", "links"]
@@ -88,34 +88,34 @@
     {
         "name": "Concept",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept",
+        "url": "http://localhost:8080/ws/rest/v1/concept",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "retired", "links"]
@@ -132,34 +132,34 @@
     {
         "name": "ConceptClass",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptclass?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptclass/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptclass",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+            "name": "POST http://localhost:8080/ws/rest/v1/conceptclass",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/conceptclass/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/conceptclass/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptclass/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/conceptclass/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/conceptclass",
+        "url": "http://localhost:8080/ws/rest/v1/conceptclass",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -176,34 +176,34 @@
     {
         "name": "ConceptDatatype",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptdatatype?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptdatatype/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+            "name": "GET http://localhost:8080/ws/rest/v1/conceptdatatype",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+            "name": "POST http://localhost:8080/ws/rest/v1/conceptdatatype",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/conceptdatatype/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/conceptdatatype/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/conceptdatatype/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/conceptdatatype",
+        "url": "http://localhost:8080/ws/rest/v1/conceptdatatype",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -220,30 +220,30 @@
     {
         "name": "ConceptDescription",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/descriptions",
+        "url": "http://localhost:8080/ws/rest/v1/concept/{parentUuid}/descriptions",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "description", "links"]
@@ -260,30 +260,30 @@
     {
         "name": "ConceptName",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+            "name": "GET http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/concept/{parentUuid}/names",
+        "url": "http://localhost:8080/ws/rest/v1/concept/{parentUuid}/names",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -300,38 +300,38 @@
     {
         "name": "Encounter",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter?patient",
+            "name": "GET http://localhost:8080/ws/rest/v1/encounter?patient",
             "description": "Fetch all non-retired encounters for a given patient"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/encounter?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/encounter/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+            "name": "GET http://localhost:8080/ws/rest/v1/encounter",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+            "name": "POST http://localhost:8080/ws/rest/v1/encounter",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/encounter/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/encounter/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encounter/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/encounter/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/encounter",
+        "url": "http://localhost:8080/ws/rest/v1/encounter",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -348,34 +348,34 @@
     {
         "name": "EncounterType",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/encountertype?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/encountertype/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+            "name": "GET http://localhost:8080/ws/rest/v1/encountertype",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+            "name": "POST http://localhost:8080/ws/rest/v1/encountertype",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/encountertype/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/encountertype/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/encountertype/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/encountertype/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/encountertype",
+        "url": "http://localhost:8080/ws/rest/v1/encountertype",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -392,34 +392,34 @@
     {
         "name": "HL7Message",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/hl7?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/hl7/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+            "name": "GET http://localhost:8080/ws/rest/v1/hl7",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+            "name": "POST http://localhost:8080/ws/rest/v1/hl7",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/hl7/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/hl7/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/hl7/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/hl7/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/hl7",
+        "url": "http://localhost:8080/ws/rest/v1/hl7",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -436,34 +436,34 @@
     {
         "name": "Location",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/location?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/location/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/location",
+            "name": "GET http://localhost:8080/ws/rest/v1/location",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/location",
+            "name": "POST http://localhost:8080/ws/rest/v1/location",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/location/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/location/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/location/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/location/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/location",
+        "url": "http://localhost:8080/ws/rest/v1/location",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -480,42 +480,42 @@
     {
         "name": "Obs",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?patient",
+            "name": "GET http://localhost:8080/ws/rest/v1/obs?patient",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?encounter",
+            "name": "GET http://localhost:8080/ws/rest/v1/obs?encounter",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/obs?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/obs/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/obs",
+            "name": "GET http://localhost:8080/ws/rest/v1/obs",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/obs",
+            "name": "POST http://localhost:8080/ws/rest/v1/obs",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/obs/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/obs/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/obs/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/obs/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/obs",
+        "url": "http://localhost:8080/ws/rest/v1/obs",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -532,34 +532,34 @@
     {
         "name": "Patient",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/patient?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/patient/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient",
+            "name": "GET http://localhost:8080/ws/rest/v1/patient",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient",
+            "name": "POST http://localhost:8080/ws/rest/v1/patient",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/patient/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patient/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patient/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patient",
+        "url": "http://localhost:8080/ws/rest/v1/patient",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -576,30 +576,30 @@
     {
         "name": "PatientIdentifier",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+            "name": "GET http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+            "name": "POST http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patient/{parentUuid}/identifiers",
+        "url": "http://localhost:8080/ws/rest/v1/patient/{parentUuid}/identifiers",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -616,34 +616,34 @@
     {
         "name": "PatientIdentifierType",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/patientidentifiertype?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/patientidentifiertype/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+            "name": "GET http://localhost:8080/ws/rest/v1/patientidentifiertype",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+            "name": "POST http://localhost:8080/ws/rest/v1/patientidentifiertype",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/patientidentifiertype/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patientidentifiertype/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/patientidentifiertype/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/patientidentifiertype",
+        "url": "http://localhost:8080/ws/rest/v1/patientidentifiertype",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -660,34 +660,34 @@
     {
         "name": "Person",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/person?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person",
+            "name": "GET http://localhost:8080/ws/rest/v1/person",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person",
+            "name": "POST http://localhost:8080/ws/rest/v1/person",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person",
+        "url": "http://localhost:8080/ws/rest/v1/person",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -704,30 +704,30 @@
     {
         "name": "PersonAddress",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/addresses",
+        "url": "http://localhost:8080/ws/rest/v1/person/{parentUuid}/addresses",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -744,30 +744,30 @@
     {
         "name": "PersonAttribute",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/attributes",
+        "url": "http://localhost:8080/ws/rest/v1/person/{parentUuid}/attributes",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -784,30 +784,30 @@
     {
         "name": "PersonName",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/names/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+            "name": "GET http://localhost:8080/ws/rest/v1/person/{parentUuid}/names",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/names",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/person/{parentUuid}/names/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/names/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/person/{parentUuid}/names/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/person/{parentUuid}/names",
+        "url": "http://localhost:8080/ws/rest/v1/person/{parentUuid}/names",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "links"]
@@ -824,34 +824,34 @@
     {
         "name": "User",
         "operations": [{
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user?q",
+            "name": "GET http://localhost:8080/ws/rest/v1/user?q",
             "description": "Fetch all non-retired that match this parameter"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}",
+            "name": "GET http://localhost:8080/ws/rest/v1/user/{uuid}",
             "description": "Fetch by unique uuid"
         },
         {
-            "name": "GET NEED-TO-CONFIGURE/ws/rest/v1/user",
+            "name": "GET http://localhost:8080/ws/rest/v1/user",
             "description": "Fetch all non-retired"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/user",
+            "name": "POST http://localhost:8080/ws/rest/v1/user",
             "description": "Create with properties in request"
         },
         {
-            "name": "POST NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}",
+            "name": "POST http://localhost:8080/ws/rest/v1/user/{uuid}",
             "description": "Edit with given uuid, only modifying properties in request"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}?!purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/user/{uuid}?!purge",
             "description": "Delete this object from the database"
         },
         {
-            "name": "DELETE NEED-TO-CONFIGURE/ws/rest/v1/user/{uuid}?purge",
+            "name": "DELETE http://localhost:8080/ws/rest/v1/user/{uuid}?purge",
             "description": "Delete this object from the database"
         }],
-        "url": "NEED-TO-CONFIGURE/ws/rest/v1/user",
+        "url": "http://localhost:8080/ws/rest/v1/user",
         "representations": [{
             "name": "ref",
             "properties": ["uuid", "display", "retired", "links"]

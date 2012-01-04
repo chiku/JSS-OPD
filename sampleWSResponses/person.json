@@ -16,7 +16,7 @@
         "links":
         [
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/names/76b2e432-3309-11e1-9d4c-c588571b8445",
+                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/names/76b2e432-3309-11e1-9d4c-c588571b8445",
                 "rel":"self"
             }
         ]
@@ -28,7 +28,7 @@
         "links":
         [
             {
-                "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/addresses/76b0f956-3309-11e1-9d4c-c588571b8445",
+                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/addresses/76b0f956-3309-11e1-9d4c-c588571b8445",
                 "rel":"self"
             }
         ]
@@ -40,11 +40,11 @@
     "links":
     [
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+            "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
             "rel":"self"
         },
         {
-            "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445?v=full",
+            "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445?v=full",
             "rel":"full"
         }
     ]

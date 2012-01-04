@@ -12,7 +12,7 @@
                 "links":
                 [
                     {
-                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
                         "rel":"self"
                     }
                 ]
@@ -25,7 +25,7 @@
                 "links":
                 [
                     {
-                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/concept/7650f2ae-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/concept/7650f2ae-3309-11e1-9d4c-c588571b8445",
                         "rel":"self"
                     }
                 ]
@@ -43,7 +43,7 @@
                 "links":
                 [
                     {
-                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
+                        "uri":"http://localhost:8080/ws/rest/v1/location/8d6c993e-c2cc-11de-8d13-0010c6dffd0f",
                         "rel":"self"
                     }
                 ]
@@ -56,7 +56,7 @@
                 "links":
                 [
                     {
-                        "uri":"NEED-TO-CONFIGURE/ws/rest/v1/encounter/01edcc40-f804-4c49-9568-c67fcc4b4599",
+                        "uri":"http://localhost:8080/ws/rest/v1/encounter/01edcc40-f804-4c49-9568-c67fcc4b4599",
                         "rel":"self"
                     }
                 ]
@@ -65,11 +65,11 @@
             "links":
             [
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68",
+                    "uri":"http://localhost:8080/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68",
                     "rel":"self"
                 },
                 {
-                    "uri":"NEED-TO-CONFIGURE/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68?v=full",
+                    "uri":"http://localhost:8080/ws/rest/v1/obs/863bfde2-25b9-4342-bda9-1fc839efea68?v=full",
                     "rel":"full"
                 }
             ]
