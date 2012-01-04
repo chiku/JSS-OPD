@@ -50,7 +50,7 @@ Run tests
   rackup
 ```
 
-* Visit http://localhost:8889
+* Visit http://localhost:8889/spec/spec.runner.html
 
 Minify assets
 -------------
