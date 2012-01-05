@@ -8,7 +8,6 @@ jQuery(function() {
 
     initialize: function(options) {
       this.collection.bind('reset', this.render, this);
-      this.selectors = Application.Configuration.Selectors;
 
       new Application.Views.Encounters.Sort({
         collection: this.collection
@@ -22,14 +21,14 @@ jQuery(function() {
         var view = new Application.Views.Encounters.Show({
           model: encounter
         });
-        jQuery(Application.Configuration.Selectors.patients).append(view.render().el);
+        jQuery(Application.Configuration.Selectors.encounters).append(view.render().el);
       }, this);
 
       return this;
     },
 
     attachContentToCleanContainer: function() {
-      jQuery(this.selectors.appointments)
+      jQuery(Application.Configuration.Selectors.appointments)
         .empty()
         .append(this.render().el);
 

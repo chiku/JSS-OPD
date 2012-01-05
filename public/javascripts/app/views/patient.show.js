@@ -8,7 +8,6 @@ jQuery(function() {
 
     initialize: function(options) {
       this.model.bind('change', this.attachContentToCleanContainer, this);
-      this.selectors = Application.Configuration.Selectors;
     },
 
     render: function() {
@@ -19,7 +18,7 @@ jQuery(function() {
     },
 
     attachContentToCleanContainer: function() {
-      jQuery(this.selectors.patientDetails)
+      jQuery(Application.Configuration.Selectors.patient)
         .empty()
         .append(this.render().el);
 
