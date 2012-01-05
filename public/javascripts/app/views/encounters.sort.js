@@ -1,6 +1,6 @@
 jQuery(function() {
   Application.Views.Encounters.Sort = Backbone.View.extend({
-    el: jQuery(Application.Configuration.Selectors.patientsSort),
+    el: jQuery(Application.Configuration.Selectors.encountersSort),
 
     events: {
       'click': 'sortPatients'

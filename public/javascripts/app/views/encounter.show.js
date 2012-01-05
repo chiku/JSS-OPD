@@ -11,7 +11,6 @@ jQuery(function() {
     template: jQuery(Application.Configuration.Selectors.templates.patient).html(),
 
     initialize: function(options) {
-      this.selectors = Application.Configuration.Selectors;
       this.model.bind('change', this.render, this);
       this.detailedView = new Application.Views.Patients.Show({
         model: this.model
