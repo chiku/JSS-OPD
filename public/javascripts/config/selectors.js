@@ -1,9 +1,9 @@
 Application.Configuration.Selectors = {
   main:             'body div[role="main"]',
   appointments:     '#appointments',
-  patients:         '#patients-container',
-  patientDetails:   '#patient-details-container',
-  patientsSort:     '#patients-sort',
+  patients:         '#encounters-container',
+  patientDetails:   '#patient-container',
+  patientsSort:     '#encounters-sort',
 
   templates: {
     encounters:     '#template-encounters',

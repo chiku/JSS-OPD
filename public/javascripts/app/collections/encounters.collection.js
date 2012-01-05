@@ -4,7 +4,12 @@ Application.Collections.Encounters = Backbone.Collection.extend({
   url: Application.Configuration.Urls.encounters,
 
   parse: function(response) {
-    return response.results;
+    var encounters = response.results;
+    _(encounters).each(function(encounter) {
+      encounter.id = encounter.uuid;
+    });
+
+    return encounters;
   },
 
   comparator: function(encounter) {

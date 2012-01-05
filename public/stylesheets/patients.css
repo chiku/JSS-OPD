@@ -26,22 +26,22 @@ ol li {
   text-align: center;
 }
 
-#patients-sort {
+#encounters-sort {
   width: 40%;
   font-size: 0.8em;
 }
 
-#patients-container .patient {
+#encounters-container .patient {
   font-size: 0.9em;
 }
 
-#patients-container .patient-name {
+#encounters-container .patient-name {
   float: left;
   width: 50%;
   padding: 2px;
 }
 
-#patients-container .doctor-name {
+#encounters-container .doctor-name {
   float: left;
   width: 30%;
   padding: 2px;
@@ -49,7 +49,7 @@ ol li {
   font-style: bold;
 }
 
-#patients-container .patient-id {
+#encounters-container .patient-id {
   float: left;
   width: 10%;
   padding: 2px;
@@ -57,12 +57,11 @@ ol li {
   font-style: bold italics;
 }
 
-#patient-details-container {
+#patient-container {
   width: 45%;
   float: left;
 }
 
-#patient-details-container .patient {
+#patient-container .patient {
   font-size: 1.3em;
 }
-
