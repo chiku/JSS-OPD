@@ -19,9 +19,9 @@ Application.Views.Encounters.Index = Backbone.View.extend({
   render: function() {
     jQuery(this.el).html(this.template({}));
 
-    this.collection.each(function(patient) {
+    this.collection.each(function(encounter) {
       var view = new Application.Views.Encounters.Show({
-        model: patient
+        model: encounter
       });
       jQuery(this.selectors.patients).append(view.render().el);
     }, this);

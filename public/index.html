@@ -51,28 +51,24 @@
 
   <script type="text/template" id="template-encounters">
     <h2>List of patients</h2>
-    <nav id="patients-sort">
+    <nav id="encounters-sort">
       <a href="#" data-sort-by="name">Name</a>
       <a href="#" data-sort-by="id">ID</a>
     </nav>
-    <ol id="patients-container"></ol>
+    <ol id="encounters-container"></ol>
   </script>
 
   <script type="text/template" id="template-encounter">
-    <div class='patient-name clear-both'> <%= name %> </div>
+    <div class='patient-name clear-both'> <%= patient.display %> </div>
       <div class='patient-more-info clear-both'>
-        <div class='doctor-name'> <%= doctor_name %> </div>
-        <div class='patient-id'> <%= id %> </div>
+        <div class='doctor-name'> <%= provider.display %> </div>
       </div>
     </div>
   </script>
 
   <script type="text/template" id="template-patient">
-    <li class='patient-name'>Name: <%= name %> </li>
-    <li class='patient-sex'>Sex: <%= sex %> </li>
-    <li class='doctor-name'>Doctor&rsquo;s Name: <%= doctor_name %> </li>
-    <li class='patient-id'>ID: <%= id %> </li>
-    <li class='appointment-time'>Appointment Time: <%= appointment_time %></li>
+    <li class='patient-name'>Name: <%= patient.display %> </li>
+    <li class='doctor-name'>Doctor&rsquo;s Name: <%= provider.display %> </li>
   </script>
 
 </body>
