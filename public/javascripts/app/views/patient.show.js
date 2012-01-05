@@ -1,29 +1,29 @@
-Application.Views.Patients.Show = Backbone.View.extend({
-  tagName: 'ul',
+jQuery(function() {
+  Application.Views.Patients.Show = Backbone.View.extend({
+    tagName: 'ul',
 
-  className: 'patient',
+    className: 'patient',
 
-  template: function() {
-    return _.template(jQuery(this.selectors.templates.patient).html())
-  },
+    template: jQuery(Application.Configuration.Selectors.templates.patient).html(),
 
-  initialize: function(options) {
-    this.model.bind('change', this.attachContentToCleanContainer, this);
-    this.selectors = Application.Configuration.Selectors;
-  },
+    initialize: function(options) {
+      this.model.bind('change', this.attachContentToCleanContainer, this);
+      this.selectors = Application.Configuration.Selectors;
+    },
 
-  render: function() {
-    var html = this.template()(this.model.toJSON());
-    jQuery(this.el).html(html);
+    render: function() {
+      var html = _.template(this.template)(this.model.toJSON());
+      jQuery(this.el).html(html);
 
-    return this;
-  },
+      return this;
+    },
 
-  attachContentToCleanContainer: function() {
-    jQuery(this.selectors.patientDetails)
-      .empty()
-      .append(this.render().el);
+    attachContentToCleanContainer: function() {
+      jQuery(this.selectors.patientDetails)
+        .empty()
+        .append(this.render().el);
 
-    return this;
-  }
+      return this;
+    }
+  });
 });

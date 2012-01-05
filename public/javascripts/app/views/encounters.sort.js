@@ -1,17 +1,14 @@
-Application.Views.Encounters.Sort = Backbone.View.extend({
-  el: function() {
-    return $(Application.Configuration.Selectors.patientsSort);
-  },
+jQuery(function() {
+  Application.Views.Encounters.Sort = Backbone.View.extend({
+    el: jQuery(Application.Configuration.Selectors.patientsSort),
 
-  events: {
-    'click': 'sortPatients'
-  },
+    events: {
+      'click': 'sortPatients'
+    },
 
-  initialize: function(options) {
-  },
-
-  sortPatients: function(e) {
-    var property = jQuery(e.target).attr('data-sort-by');
-    this.collection.reorderBy(property);
-  }
+    sortPatients: function(e) {
+      var property = jQuery(e.target).attr('data-sort-by');
+      this.collection.reorderBy(property);
+    }
+  });
 });
