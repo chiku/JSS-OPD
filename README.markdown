@@ -47,10 +47,10 @@ Run tests
 * From the root directory of the project run these commands
 
 ``` shell
-  rackup
+  rackup specs.ru
 ```
 
-* Visit http://localhost:8889/spec/spec.runner.html
+* Visit http://localhost:8888/spec/spec.runner.html
 
 Minify assets
 -------------
