@@ -7,6 +7,7 @@ jQuery(function() {
     template: jQuery(Application.Configuration.Selectors.templates.encounters).html(),
 
     initialize: function(options) {
+      this.encounterShowsContainerSelector = options.encounterShowsContainerSelector;
       this.collection.bind('reset', this.render, this);
 
       new Application.Views.Encounters.Sort({
@@ -21,7 +22,7 @@ jQuery(function() {
         var view = new Application.Views.Encounters.Show({
           model: encounter
         });
-        jQuery(Application.Configuration.Selectors.encounters).append(view.render().el);
+        jQuery(this.encounterShowsContainerSelector).append(view.render().el);
       }, this);
 
       return this;
