@@ -1,5 +1,25 @@
+Catalog of all possible calls
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/catalog
+
 Get encounters
 Examples
 Get encounters of a patient - This is required for the timeline
 curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/encounter?patient=76b05d34-3309-11e1-9d4c-c588571b8445 
 
+Get datatype of a concept
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/conceptdatatype/8d4a4488-c2cc-11de-8d13-0010c6dffd0f
+applicable names are available in http://openmrs.senthilvkumar.com/admin/concepts/conceptDatatype.list
+
+Get Concept by i
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/concept/764c8a5c-3309-11e1-9d4c-c588571b8445 
+Search concept by name (search or anything with "bac" in its name)
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/concept?q=bac
+
+Get observations related to an encounter
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/obs?encounter=01edcc40-f804-4c49-9568-c67fcc4b4599
+
+Get Details of a patient
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/patient/76b05d34-3309-11e1-9d4c-c588571b8445
+
+Get details of a person
+curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445 

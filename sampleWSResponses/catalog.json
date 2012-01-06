@@ -1,5 +1,3 @@
-//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/catalog
-//Catalog of all possible calls
 {
     "catalog": [{
         "name": "Cohort",
