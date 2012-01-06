@@ -1,9 +1,7 @@
 #\-p 8888
 
-map "/spec" do
-  use Rack::Static, :urls => ["/"], :root => "spec/javascripts"
-end
+use Rack::Reloader
 
-use Rack::Static, :urls => ["/"], :root => "public"
+use Rack::Static, :urls => ["/"], :root => "spec/javascripts"
 
 run Rack::File.new("spec/javascripts/spec.runner.html")
