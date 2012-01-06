@@ -1,7 +1,7 @@
 describe("Encounters collection", function() {
   it("has the URL to fetch encounters from", function() {
     var encounters = new Application.Collections.Encounters();
-    expect(encounters.url).toEqual('/encounter.json');
+    expect(encounters.url).toEqual('/sampleWSResponses/encounter.json');
   });
 
   describe("is ordered", function() {
