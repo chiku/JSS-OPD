@@ -2,7 +2,7 @@ var createFakeSuccessServer = function() {
   var fakeServer = sinon.fakeServer.create();
   fakeServer.respondWith(
     "GET",
-    "/encounter.json",
+    "/sampleWSResponses/encounter.json",
     [
       200,
       { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ var createFakeErrorServer = function() {
   var fakeServer = sinon.fakeServer.create();
   fakeServer.respondWith(
     "GET",
-    "/encounter.json",
+    "/sampleWSResponses/encounter.json",
     [
       404,
       { "Content-Type": "application/json" },
@@ -48,4 +48,3 @@ var createFakeErrorServer = function() {
 }
 
 var createFakeServer = createFakeSuccessServer;
-
