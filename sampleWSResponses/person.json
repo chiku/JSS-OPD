@@ -1,5 +1,3 @@
-//Get details of a person
-//curl -i -u admin:Password1 http://localhost:8080/openmrs/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445 
 {
     "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
     "gender":"M",
