@@ -50,7 +50,7 @@ Run tests
   rackup specs.ru
 ```
 
-* Visit http://localhost:8888/spec/spec.runner.html
+* Visit http://localhost:8888
 
 Minify assets
 -------------
