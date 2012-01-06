@@ -7,7 +7,8 @@ Application.Router = Backbone.Router.extend({
 
   initialize: function() {
     this.encountersView = new Application.Views.Encounters.Index({
-      collection: Application.collections.encounters
+      collection: Application.collections.encounters,
+      encounterShowsContainerSelector: Application.Configuration.Selectors.encounters
     });
   },
 
