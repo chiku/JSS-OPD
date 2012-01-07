@@ -1,4 +1,6 @@
 var createFakeSuccessServer = function() {
+  "use strict";
+
   var fakeServer = sinon.fakeServer.create();
   fakeServer.respondWith(
     "GET",
@@ -30,6 +32,8 @@ var createFakeSuccessServer = function() {
 }
 
 var createFakeErrorServer = function() {
+  "use strict";
+
   var fakeServer = sinon.fakeServer.create();
   fakeServer.respondWith(
     "GET",

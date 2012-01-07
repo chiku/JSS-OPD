@@ -1,4 +1,6 @@
 describe("Encounters index", function() {
+  "use strict";
+
   describe("on render", function() {
     beforeEach(function() {
       this.encounters = new Application.Collections.Encounters();
