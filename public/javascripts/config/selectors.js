@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true */
+
 Application.Configuration.Selectors = {
   main:             'body div[role="main"]',
   appointments:     '#appointments',

@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true, Backbone: true, _: true, jQuery: true */
+
 jQuery(function() {
   Application.Views.Patients.Show = Backbone.View.extend({
     tagName: 'ul',
