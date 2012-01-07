@@ -1,2 +1,4 @@
 .rvmrc
 Gemfile.lock
+public/javascripts/all.min.js
+public/stylesheets/all.min.css
