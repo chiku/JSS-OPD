@@ -1,4 +1,6 @@
 describe("Encounters", function() {
+  "use strict";
+
   describe("router", function() {
     beforeEach(function() {
       this.router = new Application.Router();

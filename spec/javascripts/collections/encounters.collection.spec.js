@@ -1,4 +1,6 @@
 describe("Encounters collection", function() {
+  "use strict";
+
   it("has the URL to fetch encounters from", function() {
     var encounters = new Application.Collections.Encounters();
     expect(encounters.url).toEqual('/sampleWSResponses/encounter.json');
