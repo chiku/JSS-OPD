@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true, Backbone: true, _: true */
+
 Application.Collections.Encounters = Backbone.Collection.extend({
   model: Application.Models.Encounter,
 
@@ -25,4 +29,4 @@ Application.Collections.Encounters = Backbone.Collection.extend({
   }
 });
 
-Application.collections.encounters = new Application.Collections.Encounters;
+Application.collections.encounters = new Application.Collections.Encounters();

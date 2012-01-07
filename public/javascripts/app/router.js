@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true, Backbone: true, _: true, jQuery: true */
+
 Application.Router = Backbone.Router.extend({
   routes: {
     ''            : 'index',

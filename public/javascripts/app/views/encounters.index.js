@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true, Backbone: true, _: true, jQuery: true */
+
 jQuery(function() {
   Application.Views.Encounters.Index = Backbone.View.extend({
     tagName: 'section',
@@ -10,7 +14,7 @@ jQuery(function() {
       this.encounterShowsContainerSelector = options.encounterShowsContainerSelector;
       this.collection.bind('reset', this.render, this);
 
-      new Application.Views.Encounters.Sort({
+      var sort = new Application.Views.Encounters.Sort({
         collection: this.collection
       });
     },

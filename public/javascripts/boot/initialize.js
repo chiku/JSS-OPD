@@ -1,3 +1,7 @@
+"use strict";
+/*jslint white: false, nomen: false */
+/*global Application: true, Backbone: true, _: true */
+
 var Application = {
   Models: {},
 
@@ -17,7 +21,7 @@ var Application = {
   },
 
   initialize: function() {
-    new Application.Router();
+    var router = new Application.Router();
     Backbone.history.start();
     Application.collections.encounters.fetch();
   }
