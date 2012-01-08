@@ -12,7 +12,7 @@ jQuery(function() {
       'click': 'showDetails'
     },
 
-    template: jQuery(Application.Configuration.Selectors.templates.patient).html(),
+    template: jQuery(Application.Configuration.Selectors.templates.encounter).html(),
 
     initialize: function(options) {
       this.model.bind('change', this.render, this);

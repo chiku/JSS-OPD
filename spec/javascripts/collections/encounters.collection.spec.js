@@ -48,7 +48,7 @@ describe("Encounters collection", function() {
         expect(this.encounters.at(2)).toBe(this.encounterOne);
       });
 
-      it("by incorrect filed is no-op", function() {
+      it("by older order on order by incorrect fields", function() {
         this.encounters.reorderBy('providerName');
         this.encounters.reorderBy('BadField');
         this.encounters.reorderBy('VeryBadField');

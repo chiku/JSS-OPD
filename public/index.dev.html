@@ -76,7 +76,7 @@
   <![endif]-->
 
   <script type="text/template" id="template-encounters">
-    <h2>List of patients</h2>
+    <h2>Encounters</h2>
     <nav id="encounters-sort">
       <a href="#" data-sort-by="patientName">Patient</a>
       <a href="#" data-sort-by="providerName">Provider</a>
@@ -85,9 +85,10 @@
   </script>
 
   <script type="text/template" id="template-encounter">
-    <div class='patient-name clear-both'> <%= patient.display %> </div>
-      <div class='patient-more-info clear-both'>
-        <div class='doctor-name'> <%= provider.display %> </div>
+    <div class='patient-name clear-left'> <%= patient.display %> </div>
+      <div class='patient-more-info clear-left'>
+        <div class='provider-name'> <%= provider.display %> </div>
+        <div class='encounter-time'> <%= encounterDatetime %> </div>
       </div>
     </div>
   </script>

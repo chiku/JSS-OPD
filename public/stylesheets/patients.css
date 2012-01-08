@@ -31,7 +31,7 @@ ol li {
   font-size: 0.8em;
 }
 
-#encounters-container .patient {
+#encounters-container .encounter {
   font-size: 0.9em;
 }
 
@@ -39,9 +39,10 @@ ol li {
   float: left;
   width: 50%;
   padding: 2px;
+  font-size: 0.9em;
 }
 
-#encounters-container .doctor-name {
+#encounters-container .provider-name {
   float: left;
   width: 30%;
   padding: 2px;
@@ -49,11 +50,11 @@ ol li {
   font-style: bold;
 }
 
-#encounters-container .patient-id {
+#encounters-container .encounter-time {
   float: left;
-  width: 10%;
+  width: 20%;
   padding: 2px;
-  font-size: 0.55em;
+  font-size: 0.7em;
   font-style: bold italics;
 }
 
