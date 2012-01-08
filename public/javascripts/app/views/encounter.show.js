@@ -17,7 +17,7 @@ jQuery(function() {
     initialize: function(options) {
       this.model.bind('change', this.render, this);
       this.detailedView = new Application.Views.Patients.Show({
-        model: new Application.Models.Patient
+        model: new Application.Models.Patient()
       });
     },
 

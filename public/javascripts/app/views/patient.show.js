@@ -16,19 +16,17 @@ jQuery(function() {
 
     render: function() {
       var that = this;
-      $.ajax({
-                type : "GET",
-                url : Application.Configuration.Urls.patients,
-                dataType : "json",
-                success: function(result) {
-                          that.model = result;
-                          var html = _.template(that.template)(that.model);
-                          jQuery(that.el).html(html);
-                         },
-                error : function() {
-                          alert("error")
-                         }
-              });
+      this.model.fetch({
+            success: function(model, resp) {
+                var viewModel = {Name: model.Name(), 
+                                 Address: model.Address(), 
+                                 Age: model.Age()};
+                var html = _.template(that.template)(viewModel);
+                jQuery(that.el).html(html);
+            },
+            }
+        )
+      
       return this;
     },
 
