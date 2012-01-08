@@ -12,9 +12,14 @@ namespace :switch_to do
   def switch_to env
     FileUtils.rm_f "public/index.html"
     FileUtils.rm_f "spec/javascripts/index.html"
-    FileUtils.ln_s "index.#{env}.html", "public/index.html"
-    FileUtils.ln_s "index.#{env}.html", "spec/javascripts/index.html"
-    puts "Index symlinks now point to #{env}"
+    if RUBY_PLATFORM.downcase.include?("mswin") # No symlink in windows
+      FileUtils.cp "public/index.#{env}.html", "public/index.html"
+      FileUtils.cp "spec/javascripts/index.#{env}.html", "spec/javascripts/index.html"
+    else
+      FileUtils.ln_s "index.#{env}.html", "public/index.html"
+      FileUtils.ln_s "index.#{env}.html", "spec/javascripts/index.html"
+    end
+    puts "Indexes now point to #{env}"
   end
 
   desc "Switch to development mode"
