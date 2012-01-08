@@ -11,7 +11,13 @@ Steps to get the application running
 * Run the following from the root of your project.
 
 ``` shell
-  gem install rack
+  gem install rack rake
+```
+
+* Create symlinks for pointing to development
+
+``` shell
+  rake switch_to:dev
 ```
 
 * Bring up the server in development mode
@@ -25,10 +31,10 @@ Steps to get the application running
 Run under production environment
 --------------------------------
 
-* Switch to production branch
+* Create symlinks for pointing to development
 
 ``` shell
-  git checkout production
+  rake switch_to:prod
 ```
 
 * Ensure that assets are minified. See 'Minify assets' for more details.
