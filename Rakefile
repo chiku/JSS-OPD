@@ -12,8 +12,8 @@ namespace :switch_to do
   def switch_to env
     FileUtils.rm_f "public/index.html"
     FileUtils.rm_f "spec/javascripts/index.html"
-    FileUtils.ln_s "public/index.#{env}.html", "public/index.html"
-    FileUtils.ln_s "spec/javascripts/index.#{env}.html", "spec/javascripts/index.html"
+    FileUtils.ln_s "index.#{env}.html", "public/index.html"
+    FileUtils.ln_s "index.#{env}.html", "spec/javascripts/index.html"
     puts "Index symlinks now point to #{env}"
   end
 
