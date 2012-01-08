@@ -4,7 +4,7 @@
 
 Application.Views.Encounters.Sort = Backbone.View.extend({
   el: function() {
-    return jQuery(Application.Configuration.Selectors.encountersSort)
+    return jQuery(Application.Configuration.Selectors.encountersSort);
   },
 
   events: {

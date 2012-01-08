@@ -8,6 +8,7 @@ Application.Configuration.Selectors = {
   encounters:       '#encounters-container',
   patient:          '#patient-container',
   encountersSort:   '#encounters-sort',
+  replaceByTimeago: '.replace-by-timeago',
 
   templates: {
     encounters:     '#template-encounters',

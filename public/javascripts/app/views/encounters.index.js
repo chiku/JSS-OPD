@@ -29,6 +29,7 @@ jQuery(function() {
         jQuery(this.encounterShowsContainerSelector).append(view.render().el);
       }, this);
 
+      jQuery(Application.Configuration.Selectors.replaceByTimeago).timeago();
       return this;
     },
 

@@ -88,7 +88,7 @@
     <div class='patient-name clear-left'> <%= patient.display %> </div>
       <div class='patient-more-info clear-left'>
         <div class='provider-name'> <%= provider.display %> </div>
-        <div class='encounter-time'> <%= encounterDatetime %> </div>
+        <div class='encounter-time replace-by-timeago' title='<%= encounterDatetime %>' ></div>
       </div>
     </div>
   </script>

@@ -50,6 +50,7 @@
   <script src="javascripts/lib/underscore.js"></script>
   <script src="javascripts/lib/json2.js"></script>
   <script src="javascripts/lib/backbone.js"></script>
+  <script src="javascripts/lib/jquery.timeago.js"></script>
 
   <!-- scripts concatenated and minified via build script -->
   <script src="javascripts/boot/initialize.js"></script>
@@ -88,7 +89,7 @@
     <div class='patient-name clear-left'> <%= patient.display %> </div>
       <div class='patient-more-info clear-left'>
         <div class='provider-name'> <%= provider.display %> </div>
-        <div class='encounter-time'> <%= encounterDatetime %> </div>
+        <div class='encounter-time replace-by-timeago' title='<%= encounterDatetime %>' ></div>
       </div>
     </div>
   </script>
