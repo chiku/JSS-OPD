@@ -2,17 +2,17 @@
 /*jslint white: false, nomen: false */
 /*global Application: true, Backbone: true, _: true, jQuery: true */
 
-jQuery(function() {
-  Application.Views.Encounters.Sort = Backbone.View.extend({
-    el: jQuery(Application.Configuration.Selectors.encountersSort),
+Application.Views.Encounters.Sort = Backbone.View.extend({
+  el: function() {
+    return jQuery(Application.Configuration.Selectors.encountersSort)
+  },
 
-    events: {
-      'click': 'sortPatients'
-    },
+  events: {
+    'click': 'sortPatients'
+  },
 
-    sortPatients: function(e) {
-      var property = jQuery(e.target).attr('data-sort-by');
-      this.collection.reorderBy(property);
-    }
-  });
+  sortPatients: function(e) {
+    var property = jQuery(e.target).attr('data-sort-by');
+    this.collection.reorderBy(property);
+  }
 });

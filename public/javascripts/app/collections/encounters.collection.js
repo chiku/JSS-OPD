@@ -17,15 +17,24 @@ Application.Collections.Encounters = Backbone.Collection.extend({
   },
 
   comparator: function(encounter) {
-    return encounter.get("name");
+    return encounter.patientName();
   },
 
   reorderBy: function(field) {
+    if (!this._allowedReorderOn(field)) {
+      return this;
+    }
+
     this.comparator = function(encounter) {
-      return encounter.get(field);
+      return encounter[field]();
     };
+
     this.sort();
     return this;
+  },
+
+  _allowedReorderOn: function(field) {
+    return _(["patientName", "providerName"]).include(field);
   }
 });
 

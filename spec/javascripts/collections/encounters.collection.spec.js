@@ -7,44 +7,62 @@ describe("Encounters collection", function() {
   });
 
   describe("is ordered", function() {
-    var encounterOne = new Application.Models.Encounter({
-      id: 2,
-      name: "Xyz Abc",
-      doctor_name: "Doctor A"
+    beforeEach(function() {
+      this.encounterOne = new Application.Models.Encounter({
+        patient: { display: "Xyz Abc" },
+        provider: { display: "Doctor A" },
+        id: "a2"
+      });
+      this.encounterTwo = new Application.Models.Encounter({
+        patient: { display: "Abc Xyz" },
+        provider: { display: "Doctor C" },
+        id: "a3"
+      });
+      this.encounterThree = new Application.Models.Encounter({
+        patient: { display: "ABc" },
+        provider: { display: "Doctor B" },
+        id: "a1"
+      });
+      this.encounters = new Application.Collections.Encounters();
+      this.encounters.add([this.encounterOne, this.encounterTwo, this.encounterThree]);
     });
-    var encounterTwo = new Application.Models.Encounter({
-      id: 3,
-      name: "Abc Xyz",
-      doctor_name: "Doctor C"
-    });
-    var encounterThree = new Application.Models.Encounter({
-      id: 1,
-      name: "ABc",
-      doctor_name: "Doctor B"
-    });
-    var encounters = new Application.Collections.Encounters();
-    encounters.add([encounterOne, encounterTwo, encounterThree]);
 
-    it("by name by default", function() {
-      expect(encounters.at(0)).toBe(encounterThree);
-      expect(encounters.at(1)).toBe(encounterTwo);
-      expect(encounters.at(2)).toBe(encounterOne);
+    it("by patient name be default", function() {
+      expect(this.encounters.at(0)).toBe(this.encounterThree);
+      expect(this.encounters.at(1)).toBe(this.encounterTwo);
+      expect(this.encounters.at(2)).toBe(this.encounterOne);
     });
 
     describe("on a re-order", function() {
-      it("by doctor_name", function() {
-        encounters.reorderBy('doctor_name');
-        expect(encounters.at(0)).toBe(encounterOne);
-        expect(encounters.at(1)).toBe(encounterThree);
-        expect(encounters.at(2)).toBe(encounterTwo);
+      it("by provider name", function() {
+        this.encounters.reorderBy('providerName');
+        expect(this.encounters.at(0)).toBe(this.encounterOne);
+        expect(this.encounters.at(1)).toBe(this.encounterThree);
+        expect(this.encounters.at(2)).toBe(this.encounterTwo);
+      });
+
+      it("by patient name", function() {
+        this.encounters.reorderBy('patientName');
+        expect(this.encounters.at(0)).toBe(this.encounterThree);
+        expect(this.encounters.at(1)).toBe(this.encounterTwo);
+        expect(this.encounters.at(2)).toBe(this.encounterOne);
+      });
+
+      it("by incorrect filed is no-op", function() {
+        this.encounters.reorderBy('providerName');
+        this.encounters.reorderBy('BadField');
+        this.encounters.reorderBy('VeryBadField');
+        expect(this.encounters.at(0)).toBe(this.encounterOne);
+        expect(this.encounters.at(1)).toBe(this.encounterThree);
+        expect(this.encounters.at(2)).toBe(this.encounterTwo);
       });
     });
 
     it("after multiple re-orders", function(){
-      encounters.reorderBy('doctor_name').reorderBy('name');
-      expect(encounters.at(0)).toBe(encounterThree);
-      expect(encounters.at(1)).toBe(encounterTwo);
-      expect(encounters.at(2)).toBe(encounterOne);
+      this.encounters.reorderBy('providerName').reorderBy('patientName');
+      expect(this.encounters.at(0)).toBe(this.encounterThree);
+      expect(this.encounters.at(1)).toBe(this.encounterTwo);
+      expect(this.encounters.at(2)).toBe(this.encounterOne);
     });
   });
 
