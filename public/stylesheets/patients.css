@@ -66,3 +66,12 @@ ol li {
 #patient-container .patient {
   font-size: 1.3em;
 }
+
+#patient-container .patient-details {
+  float: left;
+  width: 30%;
+  padding: 2px;
+  font-size: 0.7em;
+  font-style: bold;
+  clear: both;
+}

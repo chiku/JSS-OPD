@@ -15,9 +15,20 @@ jQuery(function() {
     },
 
     render: function() {
-      var html = _.template(this.template)(this.model.toJSON());
-      jQuery(this.el).html(html);
-
+      var that = this;
+      $.ajax({
+                type : "GET",
+                url : Application.Configuration.Urls.patients,
+                dataType : "json",
+                success: function(result) {
+                          that.model = result;
+                          var html = _.template(that.template)(that.model);
+                          jQuery(that.el).html(html);
+                         },
+                error : function() {
+                          alert("error")
+                         }
+              });
       return this;
     },
 
