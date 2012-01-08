@@ -7,17 +7,19 @@ describe("Encounters index", function() {
 
       this.encounters.add(new Application.Models.Encounter(
         {
-          patient  : { display: "Patient Name 1" },
-          provider : { display: "Doctor Name 1"  },
-          id       : "a1"
+          patient           : { display: "Patient Name 1" },
+          provider          : { display: "Doctor Name 1"  },
+          encounterDatetime : "2011-12-31T00:00:00.000+0530",
+          id                : "a1"
         }
       ));
 
       this.encounters.add(new Application.Models.Encounter(
         {
-          patient  : { display: "Patient Name 2" },
-          provider : { display: "Doctor Name 2"  },
-          id       : "a2"
+          patient           : { display: "Patient Name 2" },
+          provider          : { display: "Doctor Name 2"  },
+          encounterDatetime : "2011-01-31T00:00:00.000+0530",
+          id                : "a2"
         }
       ));
     });
@@ -46,9 +48,10 @@ describe("Encounters index", function() {
 
       this.encounters.reset(new Application.Models.Encounter(
         {
-          patient  : { display: "Patient Name 3" },
-          provider : { display: "Doctor Name 3"  },
-          id       : "a3"
+          patient           : { display: "Patient Name 3" },
+          provider          : { display: "Doctor Name 3"  },
+          encounterDatetime : "2011-11-31T00:00:00.000+0530",          
+          id                : "a3"
         }
       ));
 

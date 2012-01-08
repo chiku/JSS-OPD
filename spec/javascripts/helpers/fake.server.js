@@ -13,11 +13,13 @@ var createFakeSuccessServer = function() {
           {
             patient: { display: "Patient Name 1" },
             provider: { display: "Doctor Name 1" },
+            encounterDatetime : "2011-12-31T00:00:00.000+0530",
             uuid: "a1"
           },
           {
             patient: { display: "Patient Name 2" },
             provider: { display: "Doctor Name 2" },
+            encounterDatetime : "2012-01-31T00:00:00.000+0530",
             uuid: "a2"
           }
         ]
