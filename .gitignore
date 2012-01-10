@@ -1,2 +1,4 @@
 .rvmrc
 Gemfile.lock
+public/index.html
+spec/index.html
