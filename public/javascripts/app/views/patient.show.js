@@ -23,7 +23,7 @@ jQuery(function() {
                                  Age: model.Age()};
                 var html = _.template(that.template)(viewModel);
                 jQuery(that.el).html(html);
-            },
+            }
             }
         )
       
