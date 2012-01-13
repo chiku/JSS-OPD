@@ -1,0 +1,142 @@
+html {
+    font-size: 100%;
+    overflow-y: scroll;
+}
+body, h1, h2, h3, h4, h5, h6, ul, li, p{
+	margin:0;
+	padding:0;
+}
+body, button, input, select, textarea {
+    font-family: sans-serif;
+}
+ul, li, ol{
+	list-style: none;
+	text-align: center;
+}
+h1 {
+    font-size: 2em;
+}
+h2{
+	font-size: 1.5em
+}
+h3{
+}
+h4 {
+    font-size: 1em;
+}
+h5, p {
+    font-size: 0.9em;
+}
+.greyGrad{
+	background-color: #98999B;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEF0F1), to(#98999B), color-stop(.5,#BBBDBE));
+	background: -moz-linear-gradient(top, #EEF0F1 0%, #BBBDBE 50%, #98999B 100%);
+	width: 100%;
+	color: #5D6267;
+}
+.blueGrad{
+	background-color: #153451;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3D9CEB), to(#153451), color-stop(.5,#2C70AA));
+	background: -moz-linear-gradient(top, #3D9CEB 0%, #2C70AA 50%, #153451 100%);
+	color: #FFF;
+}
+.marginRGutter{
+	margin-right: 3px;
+}
+.marginBGutter{
+	margin-bottom: 5px;
+	float: left;
+}
+
+.wrapper{
+	margin:0 auto;
+	padding:0;
+	display:block;
+	width:970px;
+}
+.wrapper h4{
+	text-align: center;
+	padding: 17px 0;
+}
+.bar{	
+	height: 1.6em;
+}
+.leftContainer{
+	width: 18em;
+	background-color: #656565;
+	float: left;
+}
+.leftContainer h4{
+	color: #1D517D;
+	padding: 12px 0;
+}
+.leftContainerMod{
+	margin: 5px 5px 5px 3px;
+}
+.leftContainer ul li{
+	float: left;
+}
+.leftContainer ul.primaryNav li{
+	width: 5.7em;
+	padding: 8px 0;
+	font-weight: bold;
+}
+.searchTxt{
+	border: 1px solid black;
+    height: 2.4em;
+    width: 20.9em;
+}
+.leftContainer ul.secondaryNav li{
+	font-size: 0.8em;
+    font-weight: bold;
+    padding: 8px 0;
+    width: 5.28em;
+}
+.leftContainer ul.doc_info_module li img{
+	float: left;
+	border: solid 2px #878787;
+}
+.leftContainer ul.doc_info_module li div.doc_info_cont{
+	padding: 10px 5px;
+    float: left;
+    width: 68%;
+}
+.leftContainer ul.doc_info_module li div.doc_info_cont span{
+	font-size: 0.9em;
+}
+.leftContainer ul.doc_info_module li div.doc_info_cont span.number{
+	float: left;
+	color: #2f79b8;
+}
+.leftContainer ul.doc_info_module li div.doc_info_cont span.time{
+	float: right;
+}
+.content{
+	border: solid 1px red;	
+	float: left;
+	width: 70%;
+}
+.history_info_container{
+	padding: 30px;
+	color: #5d6267;
+}
+.history_info_container h4{
+	padding: 0px;
+	color: #1d517d;
+	text-align: left;
+	padding-bottom: 5px;
+}
+.history_info{
+	border: solid 1px #646464;
+	border-radius: 4px;
+	box-shadow: 0 0 15px #e1e1e1;
+	-o-box-shadow: 0 0 15px #e1e1e1;
+	-webkit-box-shadow: 0 0 15px #e1e1e1;
+	-moz-box-shadow: 0 0 15px #e1e1e1;
+	height: 100px;
+	width: 330px;
+	padding: 10px;
+	color: #5d6267;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
