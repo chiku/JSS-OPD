@@ -15,17 +15,18 @@ jQuery(function() {
     },
 
     render: function() {
-      var that = this;
+      var that = this, viewModel, html;
       this.model.fetch({
-            success: function(model, resp) {
-                var viewModel = {Name: model.Name(), 
-                                 Address: model.Address(), 
-                                 Age: model.Age()};
-                var html = _.template(that.template)(viewModel);
-                jQuery(that.el).html(html);
-            }
-            }
-        )
+        success: function(model, resp) {
+          viewModel = {
+            Name: model.name(),
+            Address: model.address(),
+            Age: model.age()
+          };
+          html = _.template(that.template)(viewModel);
+          jQuery(that.el).html(html);
+        }
+      });
       
       return this;
     },

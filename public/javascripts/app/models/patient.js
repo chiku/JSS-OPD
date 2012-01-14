@@ -4,24 +4,23 @@
 
 Application.Models.Patient = Backbone.Model.extend({ 
 
-	url: Application.Configuration.Urls.patients,
+  url: Application.Configuration.Urls.patients,
 
-	parse: function(response) {
-		return response;
-	},
+  parse: function(response) {
+    return response;
+  },
 
-	Name: function() {
-      var preferredName = this.get('person').preferredName;
-    	return preferredName ? preferredName.display : undefined;
-  	},
+  name: function() {
+    var preferredName = this.get('person').preferredName;
+    return preferredName ? preferredName.display : undefined;
+  },
 
-  Age: function(encounter) {
-      return this.get('person').age;
-  	},
+  age: function() {
+    return this.get('person').age;
+  },
 
-	Address: function(encounter) {
-      var preferredAddress = this.get('person').preferredAddress;
-      return preferredAddress ? preferredAddress.display : undefined;
-    
-  	}
+  address: function() {
+    var preferredAddress = this.get('person').preferredAddress;
+    return preferredAddress ? preferredAddress.display : undefined;
+  }
 });
