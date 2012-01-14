@@ -91,9 +91,31 @@
   </script>
 
   <script type="text/template" id="template-patient">
-    <div class='patient-name'>Name: <%= Name %> </div>
-    <div class='patient-details'>Age: <%= Age %> </div>
-    <div class='patient-details'><%= Address %> </div>
+    <div class="name"> <%= Name %> </div>
+    <div class="age"> Age: <%= Age %> </div>
+    <div class="address"> <%= Address %> </div>
+
+    <section class="patient-details">
+      <header>Patient History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Family History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Social History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Notes</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+    </section>
   </script>
 
 </body>
