@@ -1,0 +1,165 @@
+header {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+header[role="main"] {
+  padding: 17px;
+  text-align: center;
+}
+
+.wide {
+  width: 100%;
+}
+
+.margin-right-gutter{
+  margin-right: 3px;
+}
+
+.margin-bottom-gutter{
+  margin-bottom: 5px;
+  float: left;
+}
+
+.grey-gradient {
+  background-color: #98999B;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEF0F1), to(#98999B), color-stop(.5,#BBBDBE));
+  background: -moz-linear-gradient(top, #EEF0F1 0%, #BBBDBE 50%, #98999B 100%);
+  width: 100%;
+  color: #5D6267;
+}
+
+.blue-gradient {
+  background-color: #153451;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3D9CEB), to(#153451), color-stop(.5,#2C70AA));
+  background: -moz-linear-gradient(top, #3D9CEB 0%, #2C70AA 50%, #153451 100%);
+  color: #FFF;
+}
+
+.bar { 
+  height: 1.6em;
+}
+
+#appointments {
+  width: 18em;
+  background-color: #656565;
+  float: left;
+}
+
+#appointments .content {
+  margin: 5px 5px 5px 3px;
+}
+
+#appointments header {
+  color: #1D517D;
+  padding: 12px 0;
+}
+
+#appointments ul li {
+  float: left;
+}
+
+#appointments #encounters-filter li{
+  width: 5.7em;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+#appointments .search {
+  color: #517D1D;
+  font-weight: bold;
+  font-size: bold;
+  border: 1px solid black;
+  height: 2.4em;
+}
+
+#appointments #encounters-sort li {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 8px 0;
+  width: 5.28em;
+}
+
+#appointments #encounters-container img {
+  float: left;
+  border: solid 2px #878787;
+}
+
+#appointments #encounters-container .encounter-container {
+  padding: 10px 5px;
+  float: left;
+  width: 68%;
+}
+
+#appointments #encounters-container .encounter-container .patient {
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+#appointments #encounters-container .encounter-container .provider {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #6D7277;
+}
+
+#appointments #encounters-container .encounter-container .number {
+  float: left;
+  font-size: 0.9em;
+  color: #2f79b8;
+}
+
+#appointments #encounters-container .encounter-container .time {
+  font-size: 0.9em;
+  float: right;
+}
+
+#patient-container {
+  border: solid 1px red;  
+  float: left;
+  width: 70%;
+}
+
+#patient-container .patient {
+  padding: 30px;
+  color: #5d6267;
+}
+
+#patient-container header {
+  padding: 0px;
+  color: #1d517d;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+#patient-container .patient .name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#patient-container .patient .age {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+#patient-container .patient .address {
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+#patient-container .patient-information {
+  border: solid 1px #646464;
+  border-radius: 4px;
+  box-shadow: 0 0 15px #e1e1e1;
+  -o-box-shadow: 0 0 15px #e1e1e1;
+  -webkit-box-shadow: 0 0 15px #e1e1e1;
+  -moz-box-shadow: 0 0 15px #e1e1e1;
+  height: 5em;
+  padding: 0.5em;
+  color: #5d6267;
+  font-weight: bold;
+  margin-bottom: 2em;
+}

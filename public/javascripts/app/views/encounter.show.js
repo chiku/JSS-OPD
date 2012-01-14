@@ -4,7 +4,7 @@
 
 jQuery(function() {
   Application.Views.Encounters.Show = Backbone.View.extend({
-    tagName: 'li',
+    tagName: 'section',
 
     className: 'encounter',
 
@@ -17,7 +17,7 @@ jQuery(function() {
     initialize: function(options) {
       this.model.bind('change', this.render, this);
       this.detailedView = new Application.Views.Patients.Show({
-        model: this.model
+        model: new Application.Models.Patient()
       });
     },
 

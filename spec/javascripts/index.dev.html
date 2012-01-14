@@ -8,6 +8,7 @@
   <script src="code/lib/underscore.js"></script>
   <script src="code/lib/json2.js"></script>
   <script src="code/lib/backbone.js"></script>
+  <script src="code/lib/jquery.timeago.js"></script>
 
   <!-- include test framework here -->
   <link rel="shortcut icon" type="image/png" href="jasmine-standalone-1.1.0/jasmine_favicon.png">
@@ -76,26 +77,71 @@
 <body>
   <!-- include templates here... -->
   <script type="text/template" id="template-encounters">
-    <h2>Encounters</h2>
-    <nav id="encounters-sort">
-      <a href="#" data-sort-by="patientName">Patient</a>
-      <a href="#" data-sort-by="providerName">Provider</a>
-    </nav>
-    <ol id="encounters-container"></ol>
+    <header class="grey-gradient">Patients</header>
+    <section class="content">
+      <nav class="margin-bottom-gutter" id="encounters-filter">
+        <ul>
+          <li class="blue-gradient margin-right-gutter">Today</li>
+          <li class="grey-gradient margin-right-gutter">Pending</li>
+          <li class="grey-gradient">All</li>
+        <ul>
+      </nav>
+      <input type="text" class="search margin-bottom-gutter wide" />
+
+      <nav class="margin-bottom-gutter" id="encounters-sort">
+        <ul>
+          <li class="grey-gradient margin-right-gutter">Time</li>
+          <li class="grey-gradient margin-right-gutter" data-sort-by="providerName">Doctor</li>
+          <li class="blue-gradient margin-right-gutter" data-sort-by="patientName">Name</li>
+          <li class="grey-gradient">Urgency</li>
+        </ul>
+      </nav>
+
+      <section id="encounters-container"></section>
+    </section>
   </script>
 
   <script type="text/template" id="template-encounter">
-    <div class='patient-name clear-left'> <%= patient.display %> </div>
-      <div class='patient-more-info clear-left'>
-        <div class='provider-name'> <%= provider.display %> </div>
-        <div class='encounter-time replace-by-timeago' title='<%= encounterDatetime %>' ></div>
-      </div>
-    </div>
+    <section class="grey-gradient margin-bottom-gutter">
+      <img src="images/thumbnail.png" />
+      <section class="encounter-container">
+        <div class="patient"> <%= patient.display %> </div>
+        <div class="provider"> <%= provider.display %> </div>
+        <span>
+          <span class="number">411</span>
+          <span class="time replace-by-timeago" title="<%= encounterDatetime %>" ></span>
+        </span>
+      </section>
+    </li>
   </script>
 
   <script type="text/template" id="template-patient">
-    <li class='patient-name'>Name: <%= patient.display %> </li>
-    <li class='doctor-name'>Doctor&rsquo;s Name: <%= provider.display %> </li>
+    <div class="name"> <%= Name %> </div>
+    <div class="age"> Age: <%= Age %> </div>
+    <div class="address"> <%= Address %> </div>
+
+    <section class="patient-details">
+      <header>Patient History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Family History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Social History</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+
+      <header>Notes</header>
+      <section class="patient-information">
+        <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
+      </section>
+    </section>
   </script>
+
 </body>
 </html>
