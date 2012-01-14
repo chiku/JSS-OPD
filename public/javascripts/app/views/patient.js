@@ -15,11 +15,9 @@ jQuery(function() {
     },
 
     render: function() {
-      var that = this, viewModel, html;
-      this.model.fetch();
-      html = _.template(that.template)(this.model);
-      jQuery(that.el).html(html);
-      
+      var html = _.template(this.template)(this.model);
+      jQuery(this.el).html(html);
+
       return this;
     },
 

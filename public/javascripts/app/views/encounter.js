@@ -9,14 +9,14 @@ jQuery(function() {
     className: 'encounter',
 
     events: {
-      'click': 'showDetails'
+      'click': 'showPatient'
     },
 
     template: jQuery(Application.Configuration.Selectors.templates.encounter).html(),
 
     initialize: function(options) {
       this.model.bind('change', this.render, this);
-      this.patient = new Application.Models.Patient({id: this.model.id});
+      this.patient = new Application.Models.Patient({id: this.model.get('patient').uuid});
       this.patientView = new Application.Views.Patients.Show({
         model: this.patient
       });
@@ -29,8 +29,8 @@ jQuery(function() {
       return this;
     },
 
-    showDetails: function() {
-      this.patientView.attachContentToCleanContainer();
+    showPatient: function() {
+      this.patient.fetch();
     }
   });
 });

@@ -1,25 +1,25 @@
 {
-    "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
+    "uuid":"76b05d34-1",
     "identifiers":
     [
         {
-            "uuid":"76ade27a-3309-11e1-9d4c-c588571b8445",
+            "uuid":"76ade27a-1",
             "display":"OpenMRS Identification Number = 100-8",
             "links":
             [
                 {
-                    "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-3309-11e1-9d4c-c588571b8445/identifiers/76ade27a-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-1/identifiers/76ade27a-1",
                     "rel":"self"
                 }
             ]
         },
         {
-            "uuid":"76ade158-3309-11e1-9d4c-c588571b8445",
+            "uuid":"76ade158-1",
             "display":"Old Identification Number = 100",
             "links":
             [
                 {
-                    "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-3309-11e1-9d4c-c588571b8445/identifiers/76ade158-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-1/identifiers/76ade158-1",
                     "rel":"self"
                 }
             ]
@@ -27,9 +27,9 @@
     ],
     "person":
     {
-        "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
+        "uuid":"76b05d34-1",
         "gender":"M",
-        "age":36,
+        "age":64,
         "birthdate":"1975-01-01T00:00:00.000+0530",
         "birthdateEstimated":false,
         "dead":false,
@@ -37,24 +37,24 @@
         "causeOfDeath":null,
         "preferredName":
         {
-            "uuid":"76b2e432-3309-11e1-9d4c-c588571b8445",
+            "uuid":"76b2e432-1",
             "display":"Mr. John D Patient",
             "links":
             [
                 {
-                    "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/names/76b2e432-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-1/names/76b2e432-1",
                     "rel":"self"
                 }
             ]
         },
         "preferredAddress":
         {
-            "uuid":"76b0f956-3309-11e1-9d4c-c588571b8445",
+            "uuid":"76b0f956-1",
             "display":"555 Johnson Rd.",
             "links":
             [
                 {
-                    "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445/addresses/76b0f956-3309-11e1-9d4c-c588571b8445",
+                    "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-1/addresses/76b0f956-1",
                     "rel":"self"
                 }
             ]
@@ -66,11 +66,11 @@
         "links":
         [
             {
-                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-1",
                 "rel":"self"
             },
             {
-                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445?v=full",
+                "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-1?v=full",
                 "rel":"full"
             }
         ]
@@ -79,11 +79,11 @@
     "links":
     [
         {
-            "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-3309-11e1-9d4c-c588571b8445",
+            "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-1",
             "rel":"self"
         },
         {
-            "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-3309-11e1-9d4c-c588571b8445?v=full",
+            "uri":"http://localhost:8080/ws/rest/v1/patient/76b05d34-1?v=full",
             "rel":"full"
         }
     ]

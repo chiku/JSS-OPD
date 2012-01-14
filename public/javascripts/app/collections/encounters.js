@@ -5,7 +5,10 @@
 Application.Collections.Encounters = Backbone.Collection.extend({
   model: Application.Models.Encounter,
 
-  url: Application.Configuration.Urls.encounters,
+  url: function() {
+    var urls = Application.Configuration.Urls;
+    return urls.encounters + "." + urls.extension;
+  },
 
   parse: function(response) {
     var encounters = response.results;

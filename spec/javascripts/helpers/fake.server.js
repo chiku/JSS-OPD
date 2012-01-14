@@ -1,4 +1,4 @@
-var createFakeSuccessServer = function() {
+var createFakeEncounterSuccessServer = function() {
   "use strict";
 
   var fakeServer = sinon.fakeServer.create();
@@ -33,7 +33,7 @@ var createFakeSuccessServer = function() {
   };
 }
 
-var createFakeErrorServer = function() {
+var createFakeEncounterErrorServer = function() {
   "use strict";
 
   var fakeServer = sinon.fakeServer.create();
@@ -53,4 +53,27 @@ var createFakeErrorServer = function() {
   };
 }
 
-var createFakeServer = createFakeSuccessServer;
+var createFakePatientSuccessServer = function() {
+  "use strict";
+
+  var fakeServer = sinon.fakeServer.create();
+  fakeServer.respondWith(
+    "GET",
+    "/sampleWSResponses/patient/abc123.json",
+    [
+      200,
+      { "Content-Type": "application/json" },
+      JSON.stringify({
+        uuid            : "abc123",
+        age             : 36,
+        preferredName   : { display: "Mr. John D Patient" },
+        preferredAddress: { display: "555 Johnson Rd." }
+      })
+    ]
+  );
+
+  return {
+    respond: function() { fakeServer.respond(); },
+    stop: function() { fakeServer.restore(); }
+  };
+}

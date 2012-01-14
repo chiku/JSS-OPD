@@ -3,10 +3,13 @@
 /*global Application: true, Backbone: true, _: true */
 
 Application.Models.Patient = Backbone.Model.extend({ 
-
-  url: Application.Configuration.Urls.patients,
+  url: function() {
+    var urls = Application.Configuration.Urls;
+    return urls.patients + "/" + this.get('id') + "." + urls.extension;
+  },
 
   parse: function(response) {
+    response.id = response.uuid;
     return response;
   },
 

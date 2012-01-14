@@ -42,7 +42,7 @@ describe("Encounters", function() {
 
   describe("for index", function() {
     it("attaches encounters details to DOM", function() {
-      var fakeSever = createFakeSuccessServer();
+      var fakeSever = createFakeEncounterSuccessServer();
       var attachContentStub = spyOn(Application.Views.Encounters.Index.prototype, "attachContentToCleanContainer");
       var router = new Application.Router();
 

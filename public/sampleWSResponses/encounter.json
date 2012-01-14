@@ -6,12 +6,12 @@
             "encounterDatetime":"2011-12-31T00:00:00.000+0530",
             "patient":
             {
-                "uuid":"76b05d34-3309-11e1-9d4c-c588571b8445",
+                "uuid":"76b05d34-1",
                 "display":"Mr. John D Patient",
                 "links":
                 [
                     {
-                        "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/person/76b05d34-1",
                         "rel":"self"
                     }
                 ]
@@ -30,12 +30,12 @@
             },
             "form":
             {
-                "uuid":"76a46e0c-3309-11e1-9d4c-c588571b8445",
+                "uuid":"76a46e0c-1",
                 "display":"Basic Form",
                 "links":
                 [
                     {
-                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-1",
                         "rel":"self"
                     }
                 ]
@@ -88,7 +88,7 @@
             "encounterDatetime":"2011-01-03T00:00:00.000+0530",
             "patient":
             {
-                "uuid":"76b05d34-3309-11e1-9d4c-244bdca32",
+                "uuid":"76b05d34-2",
                 "display":"Mr. John C Patient",
                 "links":
                 [
@@ -112,12 +112,12 @@
             },
             "form":
             {
-                "uuid":"76a46e0c-3309-11e1-9d4c-c588571b8445",
+                "uuid":"76a46e0c-2",
                 "display":"Basic Form",
                 "links":
                 [
                     {
-                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-2",
                         "rel":"self"
                     }
                 ]
@@ -170,7 +170,7 @@
             "encounterDatetime":"2011-12-31T00:00:00.000+0530",
             "patient":
             {
-                "uuid":"76b05d34-3309-11e1-9d4c-c588571b8446",
+                "uuid":"76b05d34-3",
                 "display":"Mr. John F Patient",
                 "links":
                 [
@@ -194,12 +194,12 @@
             },
             "form":
             {
-                "uuid":"76a46e0c-3309-11e1-9d4c-c588571b8445",
+                "uuid":"76a46e0c-3",
                 "display":"Basic Form",
                 "links":
                 [
                     {
-                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-3309-11e1-9d4c-c588571b8445",
+                        "uri":"http://localhost:8080/ws/rest/v1/temp hack/76a46e0c-3",
                         "rel":"self"
                     }
                 ]

@@ -4,6 +4,7 @@ describe("Patient", function() {
   describe("which is well-formed", function() {
     beforeEach(function() {
       this.patient = new Application.Models.Patient({
+        "id"    : "abc123",
         "person": {
           "age"             : 36,
           "preferredName"   : { "display": "Mr. John D Patient" },
@@ -12,58 +13,75 @@ describe("Patient", function() {
       });
     });
 
-    it("knows his/her name", function() {
+    it("knows its URL from the its ID", function() {
+      expect(this.patient.url()).toBe("/sampleWSResponses/patient/abc123.json");
+    });
+
+    it("knows its name from the perferred address", function() {
       expect(this.patient.name()).toBe("Mr. John D Patient");
     });
 
-    it("knows his/her age", function() {
+    it("knows its age", function() {
       expect(this.patient.age()).toBe(36);
     });
 
-    it("knows his/her Address", function() {
+    it("knows its address from the perferred address", function() {
       expect(this.patient.address()).toBe("555 Johnson Rd.");
     });
   });
 
-  describe("which is mal-formed", function() {
-    beforeEach(function() {
-      this.patient = new Application.Models.Patient({
-        "attributes": {
-          "person": { }
-        }
-      });
+  var hasUndefinedPropertiesFor = function(patient) {
+    it("has undefined name", function() {
+      expect(patient.name()).toBeUndefined();
     });
 
     it("has undefined name", function() {
-      expect(this.patient.name()).toBeUndefined();
-    });
-
-    it("has undefined name", function() {
-      expect(this.patient.age()).toBeUndefined();
+      expect(patient.age()).toBeUndefined();
     });
 
     it("has undefined Address", function() {
-      expect(this.patient.address()).toBeUndefined();
+      expect(patient.address()).toBeUndefined();
     });
+  }
+
+  describe("which is mal-formed", function() {
+    var patient = new Application.Models.Patient({
+      "attributes": {  "person": {} }
+    });
+    hasUndefinedPropertiesFor(patient);
   });
 
   describe("which is severely mal-formed", function() {
+    var patient = new Application.Models.Patient({
+      "attributes": { }
+    });
+
+    hasUndefinedPropertiesFor(patient);
+  });
+
+  describe("on fetching from server", function() {
     beforeEach(function() {
-      this.patient = new Application.Models.Patient({
-        "attributes": { }
-      });
+      this.fakeServer = createFakePatientSuccessServer();
     });
 
-    it("has undefined name", function() {
-      expect(this.patient.name()).toBeUndefined();
+    afterEach(function() {
+      this.fakeServer.stop();
     });
 
-    it("has undefined name", function() {
-      expect(this.patient.age()).toBeUndefined();
+    it("parses the response", function() {
+      var patient = new Application.Models.Patient({id: 'abc123'});
+      patient.fetch();
+      this.fakeServer.respond();
+
+      expect(patient.get('uuid')).toEqual('abc123');
     });
 
-    it("has undefined Address", function() {
-      expect(this.patient.address()).toBeUndefined();
+    it("creates IDs from uuids", function() {
+      var patient = new Application.Models.Patient({id: 'abc123'});
+      patient.fetch();
+      this.fakeServer.respond();
+
+      expect(patient.get('id')).toEqual("abc123");
     });
   });
 });
