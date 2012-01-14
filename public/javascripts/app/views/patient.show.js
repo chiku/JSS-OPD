@@ -4,7 +4,7 @@
 
 jQuery(function() {
   Application.Views.Patients.Show = Backbone.View.extend({
-    tagName: 'ul',
+    tagName: 'section',
 
     className: 'patient',
 

@@ -6,7 +6,7 @@ jQuery(function() {
   Application.Views.Encounters.Index = Backbone.View.extend({
     tagName: 'section',
 
-    className: 'encounters',
+    idName: 'appointments',
 
     template: jQuery(Application.Configuration.Selectors.templates.encounters).html(),
 

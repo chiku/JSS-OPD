@@ -4,7 +4,7 @@
 
 jQuery(function() {
   Application.Views.Encounters.Show = Backbone.View.extend({
-    tagName: 'li',
+    tagName: 'section',
 
     className: 'encounter',
 

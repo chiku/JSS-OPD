@@ -206,19 +206,13 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
+body, h1, h2, h3, h4, h5, h6, ul, li, p { padding:0; }
+nav ul, nav  ol { text-align: center; }
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
 
-
-
-
-
-
-
-
-
-
-
-
-
+h4 { font-size: 1em; }
+h5, p { font-size: 0.9em; }
 
 
 /* ==|== media queries ======================================================
