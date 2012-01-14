@@ -24,6 +24,7 @@
 
   <!-- include spec files here... -->
   <script src="models/encounter.spec.js"></script>
+  <script src="models/patient.spec.js"></script>
   <script src="collections/encounters.collection.spec.js"></script>
   <script src="router.spec.js"></script>
 
@@ -104,9 +105,9 @@
   </script>
 
   <script type="text/template" id="template-patient">
-    <div class="name"> <%= Name %> </div>
-    <div class="age"> Age: <%= Age %> </div>
-    <div class="address"> <%= Address %> </div>
+    <div class="name"> <%= name() %> </div>
+    <div class="age"> Age: <%= age() %> </div>
+    <div class="address"> <%= address() %> </div>
 
     <section class="patient-details">
       <header>Patient History</header>

@@ -1,4 +1,6 @@
 describe("Encounter", function() {
+  "use strict";
+
   describe("which is well-formed", function() {
     beforeEach(function() {
       this.encounter = new Application.Models.Encounter({

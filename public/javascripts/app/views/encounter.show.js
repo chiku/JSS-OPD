@@ -16,8 +16,9 @@ jQuery(function() {
 
     initialize: function(options) {
       this.model.bind('change', this.render, this);
-      this.detailedView = new Application.Views.Patients.Show({
-        model: new Application.Models.Patient()
+      this.patient = new Application.Models.Patient({id: this.model.id});
+      this.patientView = new Application.Views.Patients.Show({
+        model: this.patient
       });
     },
 
@@ -29,7 +30,7 @@ jQuery(function() {
     },
 
     showDetails: function() {
-      this.detailedView.attachContentToCleanContainer();
+      this.patientView.attachContentToCleanContainer();
     }
   });
 });

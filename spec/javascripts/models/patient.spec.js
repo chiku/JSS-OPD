@@ -1,4 +1,6 @@
 describe("Patient", function() {
+  "use strict";
+
   describe("which is well-formed", function() {
     beforeEach(function() {
       this.patient = new Application.Models.Patient({
@@ -6,8 +8,7 @@ describe("Patient", function() {
           "age"             : 36,
           "preferredName"   : { "display": "Mr. John D Patient" },
           "preferredAddress": { "display": "555 Johnson Rd." }
-          }
-        },
+        }
       });
     });
 
@@ -28,8 +29,28 @@ describe("Patient", function() {
     beforeEach(function() {
       this.patient = new Application.Models.Patient({
         "attributes": {
-          "person": { },
+          "person": { }
         }
+      });
+    });
+
+    it("has undefined name", function() {
+      expect(this.patient.name()).toBeUndefined();
+    });
+
+    it("has undefined name", function() {
+      expect(this.patient.age()).toBeUndefined();
+    });
+
+    it("has undefined Address", function() {
+      expect(this.patient.address()).toBeUndefined();
+    });
+  });
+
+  describe("which is severely mal-formed", function() {
+    beforeEach(function() {
+      this.patient = new Application.Models.Patient({
+        "attributes": { }
       });
     });
 
