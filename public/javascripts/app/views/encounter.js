@@ -30,7 +30,7 @@ jQuery(function() {
     },
 
     showPatient: function() {
-      this.patient.fetch();
+      this.patient.forceFetch();
     }
   });
 });

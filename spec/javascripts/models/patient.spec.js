@@ -84,4 +84,26 @@ describe("Patient", function() {
       expect(patient.get('id')).toEqual("abc123");
     });
   });
+
+  describe("on a force fetch", function() {
+    beforeEach(function() {
+      this.mockModel = new Application.Models.Patient();
+      spyOn(this.mockModel, "fetch");
+      spyOn(this.mockModel, "trigger");
+    });
+
+    it("fetches from server", function() {
+      this.mockModel.forceFetch();
+
+      expect(this.mockModel.fetch).toHaveBeenCalled();
+      expect(this.mockModel.fetch.callCount).toEqual(1);
+    });
+
+    it("triggers a change event", function() {
+      this.mockModel.forceFetch();
+
+      expect(this.mockModel.trigger).toHaveBeenCalledWith("change");
+      expect(this.mockModel.trigger.callCount).toEqual(1);
+    });
+  });
 });

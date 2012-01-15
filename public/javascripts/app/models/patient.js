@@ -37,5 +37,10 @@ Application.Models.Patient = Backbone.Model.extend({
 
   address: function() {
     return this.person().preferredAddress.display;
+  },
+
+  forceFetch: function() {
+    this.fetch();
+    this.trigger('change');
   }
 });
