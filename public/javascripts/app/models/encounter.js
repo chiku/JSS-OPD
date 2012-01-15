@@ -15,6 +15,10 @@ Application.Models.Encounter = Backbone.Model.extend({
     return this.provider().display;
   },
 
+  appointmentTime: function() {
+    return this.get('encounterDatetime');
+  },
+
   patient: function() {
     return this._retrivePropertiesFor('patient');
   },

@@ -37,7 +37,7 @@ Application.Collections.Encounters = Backbone.Collection.extend({
   },
 
   _allowedReorderOn: function(field) {
-    return _(["patientName", "providerName"]).include(field);
+    return _(["patientName", "providerName", "appointmentTime"]).include(field);
   }
 });
 

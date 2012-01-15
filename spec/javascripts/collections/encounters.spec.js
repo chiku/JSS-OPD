@@ -9,19 +9,22 @@ describe("Encounters collection", function() {
   describe("is ordered", function() {
     beforeEach(function() {
       this.encounterOne = new Application.Models.Encounter({
-        patient: { display: "Xyz Abc" },
-        provider: { display: "Doctor A" },
-        id: "a2"
+        patient          : { display: "Xyz Abc" },
+        provider         : { display: "Doctor A" },
+        id               : "a2",
+        encounterDatetime:"2011-12-31T12:00:00.000+0530"
       });
       this.encounterTwo = new Application.Models.Encounter({
-        patient: { display: "Abc Xyz" },
-        provider: { display: "Doctor C" },
-        id: "a3"
+        patient          : { display: "Abc Xyz" },
+        provider         : { display: "Doctor C" },
+        id               : "a3",
+        encounterDatetime:"2011-12-31T10:00:00.000+0530"
       });
       this.encounterThree = new Application.Models.Encounter({
-        patient: { display: "ABc" },
-        provider: { display: "Doctor B" },
-        id: "a1"
+        patient          : { display: "ABc" },
+        provider         : { display: "Doctor B" },
+        id               : "a1",
+        encounterDatetime:"2011-12-31T14:00:00.000+0530"
       });
       this.encounters = new Application.Collections.Encounters();
       this.encounters.add([this.encounterOne, this.encounterTwo, this.encounterThree]);
@@ -48,7 +51,14 @@ describe("Encounters collection", function() {
         expect(this.encounters.at(2)).toBe(this.encounterOne);
       });
 
-      it("by older order on order by incorrect fields", function() {
+      it("by appointment time", function() {
+        this.encounters.reorderBy('appointmentTime');
+        expect(this.encounters.at(0)).toBe(this.encounterTwo);
+        expect(this.encounters.at(1)).toBe(this.encounterOne);
+        expect(this.encounters.at(2)).toBe(this.encounterThree);
+      });
+
+      it("by the pre-existing order on order by incorrect fields", function() {
         this.encounters.reorderBy('providerName');
         this.encounters.reorderBy('BadField');
         this.encounters.reorderBy('VeryBadField');

@@ -17,7 +17,7 @@ Application.Models.Patient = Backbone.Model.extend({
     return {
       preferredName   : {display: undefined},
       preferredAddress: {display: undefined}
-    }
+    };
   },
 
   person: function() {

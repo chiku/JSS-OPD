@@ -4,11 +4,11 @@ describe("Patient", function() {
   describe("which is well-formed", function() {
     beforeEach(function() {
       this.patient = new Application.Models.Patient({
-        "id"    : "abc123",
-        "person": {
-          "age"             : 36,
-          "preferredName"   : { "display": "Mr. John D Patient" },
-          "preferredAddress": { "display": "555 Johnson Rd." }
+        id    : "abc123",
+        person: {
+          age             : 36,
+          preferredName   : { "display": "Mr. John D Patient" },
+          preferredAddress: { "display": "555 Johnson Rd." }
         }
       });
     });
@@ -39,7 +39,7 @@ describe("Patient", function() {
       expect(patient.age()).toBeUndefined();
     });
 
-    it("has undefined Address", function() {
+    it("has undefined address", function() {
       expect(patient.address()).toBeUndefined();
     });
   }
