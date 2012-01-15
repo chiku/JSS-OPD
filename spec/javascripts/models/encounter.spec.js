@@ -4,10 +4,14 @@ describe("Encounter", function() {
   describe("which is well-formed", function() {
     beforeEach(function() {
       this.encounter = new Application.Models.Encounter({
-        patient: { display: "Xyz Abc" },
+        patient: { display: "Xyz Abc", uuid: 'abc123' },
         provider: { display: "Doctor A" },
         id: "a2"
       });
+    });
+
+    it("knows the ID of the patient", function() {
+      expect(this.encounter.patientId()).toBe("abc123");
     });
 
     it("knows the name of the patient", function() {
@@ -26,6 +30,10 @@ describe("Encounter", function() {
         noProvider: { display: "Doctor A" },
         id: "a2"
       });
+    });
+
+    it("has undefined patient ID", function() {
+      expect(this.encounter.patientId()).toBeUndefined();
     });
 
     it("has undefined patient name", function() {

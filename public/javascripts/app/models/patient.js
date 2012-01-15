@@ -13,14 +13,22 @@ Application.Models.Patient = Backbone.Model.extend({
     return response;
   },
 
+  blank: function() {
+    return {
+      preferredName   : {display: undefined},
+      preferredAddress: {display: undefined}
+    }
+  },
+
   person: function() {
-    var person = this.get('person');
-    return person ? person : {};
+    var person = this.get('person') || this.blank();
+    person.preferredName = person.preferredName || this.blank().preferredName;
+    person.preferredAddress = person.preferredAddress || this.blank().preferredAddress;
+    return person;
   },
 
   name: function() {
-    var preferredName = this.person().preferredName;
-    return preferredName ? preferredName.display : undefined;
+    return this.person().preferredName.display;
   },
 
   age: function() {
@@ -28,7 +36,6 @@ Application.Models.Patient = Backbone.Model.extend({
   },
 
   address: function() {
-    var preferredAddress = this.person().preferredAddress;
-    return preferredAddress ? preferredAddress.display : undefined;
+    return this.person().preferredAddress.display;
   }
 });
