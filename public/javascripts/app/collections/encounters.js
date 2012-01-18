@@ -10,6 +10,10 @@ Application.Collections.Encounters = Backbone.Collection.extend({
     return urls.encounters + "." + urls.extension;
   },
 
+  initialize: function() {
+    this.sortedBy = "patientName";
+  },
+
   parse: function(response) {
     var encounters = response.results;
     _(encounters).each(function(encounter) {
@@ -32,7 +36,10 @@ Application.Collections.Encounters = Backbone.Collection.extend({
       return encounter[field]();
     };
 
+    this.sortedBy = field;
     this.sort();
+
+    this.trigger('encounter:sort', field);
     return this;
   },
 

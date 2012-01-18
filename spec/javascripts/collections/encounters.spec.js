@@ -31,6 +31,7 @@ describe("Encounters collection", function() {
     });
 
     it("by patient name be default", function() {
+      expect(this.encounters.sortedBy).toBe("patientName");
       expect(this.encounters.at(0)).toBe(this.encounterThree);
       expect(this.encounters.at(1)).toBe(this.encounterTwo);
       expect(this.encounters.at(2)).toBe(this.encounterOne);
@@ -38,30 +39,34 @@ describe("Encounters collection", function() {
 
     describe("on a re-order", function() {
       it("by provider name", function() {
-        this.encounters.reorderBy('providerName');
+        this.encounters.reorderBy("providerName");
+        expect(this.encounters.sortedBy).toBe("providerName");
         expect(this.encounters.at(0)).toBe(this.encounterOne);
         expect(this.encounters.at(1)).toBe(this.encounterThree);
         expect(this.encounters.at(2)).toBe(this.encounterTwo);
       });
 
       it("by patient name", function() {
-        this.encounters.reorderBy('patientName');
+        this.encounters.reorderBy("patientName");
+        expect(this.encounters.sortedBy).toBe("patientName");
         expect(this.encounters.at(0)).toBe(this.encounterThree);
         expect(this.encounters.at(1)).toBe(this.encounterTwo);
         expect(this.encounters.at(2)).toBe(this.encounterOne);
       });
 
       it("by appointment time", function() {
-        this.encounters.reorderBy('appointmentTime');
+        this.encounters.reorderBy("appointmentTime");
+        expect(this.encounters.sortedBy).toBe("appointmentTime");
         expect(this.encounters.at(0)).toBe(this.encounterTwo);
         expect(this.encounters.at(1)).toBe(this.encounterOne);
         expect(this.encounters.at(2)).toBe(this.encounterThree);
       });
 
       it("by the pre-existing order on order by incorrect fields", function() {
-        this.encounters.reorderBy('providerName');
-        this.encounters.reorderBy('BadField');
-        this.encounters.reorderBy('VeryBadField');
+        this.encounters.reorderBy("providerName");
+        this.encounters.reorderBy("BadField");
+        this.encounters.reorderBy("VeryBadField");
+        expect(this.encounters.sortedBy).toBe("providerName");
         expect(this.encounters.at(0)).toBe(this.encounterOne);
         expect(this.encounters.at(1)).toBe(this.encounterThree);
         expect(this.encounters.at(2)).toBe(this.encounterTwo);
@@ -69,7 +74,8 @@ describe("Encounters collection", function() {
     });
 
     it("after multiple re-orders", function(){
-      this.encounters.reorderBy('providerName').reorderBy('patientName');
+      this.encounters.reorderBy("providerName").reorderBy("patientName");
+        expect(this.encounters.sortedBy).toBe("patientName");
       expect(this.encounters.at(0)).toBe(this.encounterThree);
       expect(this.encounters.at(1)).toBe(this.encounterTwo);
       expect(this.encounters.at(2)).toBe(this.encounterOne);
