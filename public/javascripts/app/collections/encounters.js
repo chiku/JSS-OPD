@@ -5,7 +5,14 @@
 Application.Collections.Encounters = Backbone.Collection.extend({
   model: Application.Models.Encounter,
 
-  url: Application.Configuration.Urls.encounters,
+  url: function() {
+    var urls = Application.Configuration.Urls;
+    return urls.encounters + "." + urls.extension;
+  },
+
+  initialize: function() {
+    this.sortedBy = "patientName";
+  },
 
   parse: function(response) {
     var encounters = response.results;
@@ -29,12 +36,15 @@ Application.Collections.Encounters = Backbone.Collection.extend({
       return encounter[field]();
     };
 
+    this.sortedBy = field;
     this.sort();
+
+    this.trigger('encounter:sort', field);
     return this;
   },
 
   _allowedReorderOn: function(field) {
-    return _(["patientName", "providerName"]).include(field);
+    return _(["patientName", "providerName", "appointmentTime"]).include(field);
   }
 });
 

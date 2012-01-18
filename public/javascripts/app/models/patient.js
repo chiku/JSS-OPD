@@ -3,24 +3,44 @@
 /*global Application: true, Backbone: true, _: true */
 
 Application.Models.Patient = Backbone.Model.extend({ 
-
-  url: Application.Configuration.Urls.patients,
+  url: function() {
+    var urls = Application.Configuration.Urls;
+    return urls.patients + "/" + this.get('id') + "." + urls.extension;
+  },
 
   parse: function(response) {
+    response.id = response.uuid;
     return response;
   },
 
+  blank: function() {
+    return {
+      preferredName   : {display: undefined},
+      preferredAddress: {display: undefined}
+    };
+  },
+
+  person: function() {
+    var person = this.get('person') || this.blank();
+    person.preferredName = person.preferredName || this.blank().preferredName;
+    person.preferredAddress = person.preferredAddress || this.blank().preferredAddress;
+    return person;
+  },
+
   name: function() {
-    var preferredName = this.get('person').preferredName;
-    return preferredName ? preferredName.display : undefined;
+    return this.person().preferredName.display;
   },
 
   age: function() {
-    return this.get('person').age;
+    return this.person().age;
   },
 
   address: function() {
-    var preferredAddress = this.get('person').preferredAddress;
-    return preferredAddress ? preferredAddress.display : undefined;
+    return this.person().preferredAddress.display;
+  },
+
+  forceFetch: function() {
+    this.fetch();
+    this.trigger('change');
   }
 });

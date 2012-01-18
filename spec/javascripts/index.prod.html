@@ -24,10 +24,11 @@
 
   <!-- include spec files here... -->
   <script src="models/encounter.spec.js"></script>
-  <script src="collections/encounters.collection.spec.js"></script>
+  <script src="models/patient.spec.js"></script>
+  <script src="collections/encounters.spec.js"></script>
   <script src="router.spec.js"></script>
 
-  <script src="views/encounters.index.spec.js"></script>
+  <script src="views/encounters.spec.js"></script>
 
   <script>
     (function() {
@@ -78,7 +79,7 @@
 
       <nav class="margin-bottom-gutter" id="encounters-sort">
         <ul>
-          <li class="grey-gradient margin-right-gutter">Time</li>
+          <li class="grey-gradient margin-right-gutter" data-sort-by="appointmentTime">Time</li>
           <li class="grey-gradient margin-right-gutter" data-sort-by="providerName">Doctor</li>
           <li class="blue-gradient margin-right-gutter" data-sort-by="patientName">Name</li>
           <li class="grey-gradient">Urgency</li>
@@ -104,23 +105,23 @@
   </script>
 
   <script type="text/template" id="template-patient">
-    <div class="name"> <%= Name %> </div>
-    <div class="age"> Age: <%= Age %> </div>
-    <div class="address"> <%= Address %> </div>
+    <div class="name"> <%= name() %> </div>
+    <div class="age"> Age: <%= age() %> </div>
+    <div class="address"> <%= address() %> </div>
 
     <section class="patient-details">
       <header>Patient History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 
       <header>Family History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 
       <header>Social History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 

@@ -62,11 +62,11 @@
 
   <script src="javascripts/app/models/patient.js"></script>
   <script src="javascripts/app/models/encounter.js"></script>
-  <script src="javascripts/app/collections/encounters.collection.js"></script>
+  <script src="javascripts/app/collections/encounters.js"></script>
   <script src="javascripts/app/router.js"></script>
-  <script src="javascripts/app/views/encounters.index.js"></script>
-  <script src="javascripts/app/views/encounter.show.js"></script>
-  <script src="javascripts/app/views/patient.show.js"></script>
+  <script src="javascripts/app/views/encounters.js"></script>
+  <script src="javascripts/app/views/encounter.js"></script>
+  <script src="javascripts/app/views/patient.js"></script>
   <script src="javascripts/app/views/encounters.sort.js"></script>
 
   <script src="javascripts/boot/run.js"></script>
@@ -93,7 +93,7 @@
 
       <nav class="margin-bottom-gutter" id="encounters-sort">
         <ul>
-          <li class="grey-gradient margin-right-gutter">Time</li>
+          <li class="grey-gradient margin-right-gutter" data-sort-by="appointmentTime">Time</li>
           <li class="grey-gradient margin-right-gutter" data-sort-by="providerName">Doctor</li>
           <li class="blue-gradient margin-right-gutter" data-sort-by="patientName">Name</li>
           <li class="grey-gradient">Urgency</li>
@@ -119,23 +119,23 @@
   </script>
 
   <script type="text/template" id="template-patient">
-    <div class="name"> <%= Name %> </div>
-    <div class="age"> Age: <%= Age %> </div>
-    <div class="address"> <%= Address %> </div>
+    <div class="name"> <%= name() %> </div>
+    <div class="age"> Age: <%= age() %> </div>
+    <div class="address"> <%= address() %> </div>
 
     <section class="patient-details">
       <header>Patient History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 
       <header>Family History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 
       <header>Social History</header>
-      <section class="patient-information">
+      <section class="patient-information spacer">
         <p>Some info from the screener to help the doctor or nurse with more information as they scroll through the patient list</p>
       </section>
 

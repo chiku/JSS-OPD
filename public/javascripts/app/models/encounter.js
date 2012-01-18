@@ -3,16 +3,31 @@
 /*global Application: true, Backbone: true, _: true */
 
 Application.Models.Encounter = Backbone.Model.extend({
-  patientName: function(encounter) {
-    return this._retrivePropertyFor('patient');
+  patientId: function() {
+    return this.patient().uuid;
   },
 
-  providerName: function(encounter) {
-    return this._retrivePropertyFor('provider');
+  patientName: function() {
+    return this.patient().display;
   },
 
-  _retrivePropertyFor: function(property) {
-    var person = this.get(property);
-    return person ? person.display : undefined;
+  providerName: function() {
+    return this.provider().display;
+  },
+
+  appointmentTime: function() {
+    return this.get('encounterDatetime');
+  },
+
+  patient: function() {
+    return this._retrivePropertiesFor('patient');
+  },
+
+  provider: function() {
+    return this._retrivePropertiesFor('provider');
+  },
+
+  _retrivePropertiesFor: function(person) {
+    return this.get(person) || {};
   }
 });

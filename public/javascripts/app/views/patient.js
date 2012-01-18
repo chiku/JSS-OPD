@@ -15,19 +15,9 @@ jQuery(function() {
     },
 
     render: function() {
-      var that = this, viewModel, html;
-      this.model.fetch({
-        success: function(model, resp) {
-          viewModel = {
-            Name: model.name(),
-            Address: model.address(),
-            Age: model.age()
-          };
-          html = _.template(that.template)(viewModel);
-          jQuery(that.el).html(html);
-        }
-      });
-      
+      var html = _.template(this.template)(this.model);
+      jQuery(this.el).html(html);
+
       return this;
     },
 
