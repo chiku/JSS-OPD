@@ -17,6 +17,7 @@
   <script src="jasmine-standalone-1.1.0/jasmine.js"></script>
   <script src="jasmine-standalone-1.1.0/jasmine-html.js"></script>
   <script src="helpers/sinon-1.0.0.js"></script>
+  <script src="helpers/error.trap.js"></script>
   <script src="helpers/fake.server.js"></script>
 
   <!-- include source files here... -->
@@ -64,6 +65,7 @@
 </head>
 
 <body>
+  <div id="syntax-errors" style="color:#cc2222"></div>
   <!-- include templates here... -->
   <script type="text/template" id="template-encounters">
     <header class="grey-gradient">Patients</header>
