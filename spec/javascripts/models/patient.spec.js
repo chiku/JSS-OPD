@@ -14,7 +14,7 @@ describe("Patient", function() {
     });
 
     it("knows its URL from the its ID", function() {
-      expect(this.patient.url()).toBe("/sampleWSResponses/patient/abc123.json");
+      expect(/\/patient\/abc123\.json$/.test(this.patient.url())).toBeTruthy("URL doesn't match");
     });
 
     it("knows its name from the perferred address", function() {

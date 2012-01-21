@@ -7,7 +7,7 @@ describe("Encounter", function() {
         patient          : { display: "Xyz Abc", uuid: 'abc123' },
         provider         : { display: "Doctor A" },
         id               : "a2",
-        encounterDatetime:"2011-12-31T12:00:00.000+0530"
+        encounterDatetime: "2011-12-31T12:00:00.000+0530"
       });
     });
 

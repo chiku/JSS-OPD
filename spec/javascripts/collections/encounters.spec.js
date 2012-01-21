@@ -3,7 +3,7 @@ describe("Encounters collection", function() {
 
   it("has the URL to fetch encounters from", function() {
     var encounters = new Application.Collections.Encounters();
-    expect(encounters.url()).toEqual('/sampleWSResponses/encounter.json');
+    expect(/\/encounter\.json$/.test(encounters.url())).toBeTruthy("URL doesn't match");
   });
 
   describe("is ordered", function() {
@@ -12,19 +12,19 @@ describe("Encounters collection", function() {
         patient          : { display: "Xyz Abc" },
         provider         : { display: "Doctor A" },
         id               : "a2",
-        encounterDatetime:"2011-12-31T12:00:00.000+0530"
+        encounterDatetime: "2011-12-31T12:00:00.000+0530"
       });
       this.encounterTwo = new Application.Models.Encounter({
         patient          : { display: "Abc Xyz" },
         provider         : { display: "Doctor C" },
         id               : "a3",
-        encounterDatetime:"2011-12-31T10:00:00.000+0530"
+        encounterDatetime: "2011-12-31T10:00:00.000+0530"
       });
       this.encounterThree = new Application.Models.Encounter({
         patient          : { display: "ABc" },
         provider         : { display: "Doctor B" },
         id               : "a1",
-        encounterDatetime:"2011-12-31T14:00:00.000+0530"
+        encounterDatetime: "2011-12-31T14:00:00.000+0530"
       });
       this.encounters = new Application.Collections.Encounters();
       this.encounters.add([this.encounterOne, this.encounterTwo, this.encounterThree]);
