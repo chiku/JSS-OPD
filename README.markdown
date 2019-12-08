@@ -11,19 +11,20 @@ Steps to get the application running
 * Run the following from the root of your project.
 
 ``` shell
-  gem install rack rake
+  gem install bundler
+  bundle install
 ```
 
 * Create symlinks for pointing to development
 
 ``` shell
-  rake switch_to:dev
+  bundle exec rake switch_to:dev
 ```
 
 * Bring up the server in development mode
 
 ``` shell
-  rackup
+  bundle exec rackup
 ```
 
 * Visit http://localhost:9292
@@ -34,7 +35,7 @@ Run under production environment
 * Create symlinks for pointing to development
 
 ``` shell
-  rake switch_to:prod
+  bundle exec rake switch_to:prod
 ```
 
 * Ensure that assets are minified. See 'Minify assets' for more details.
@@ -42,7 +43,7 @@ Run under production environment
 * Bring up the server in production mode
 
 ``` shell
-  rackup -E production
+  bundle exec rackup -E production
 ```
 
 * Visit http://localhost:9292
@@ -53,7 +54,7 @@ Run tests
 * From the root directory of the project run these commands
 
 ``` shell
-  rackup specs.ru
+  bundle exec rackup specs.ru
 ```
 
 * Visit http://localhost:8888
@@ -61,19 +62,17 @@ Run tests
 Minify assets
 -------------
 
-* We are using juicer to minify assets. This internally uses YUI-compressor. 'java' should be available in your path for this to work.
+* We are using juicer to minify assets. This internally uses uglify. 'node' should be available in your path for this to work.
 
 
 * If you want to install tools to minify javascript and stylesheet files on your local box, run the following command. This is a one-time step.
 
 ``` shell
-  gem install juicer
-  juicer install yui_compressor
-  juicer install jslint
+  bundle install
 ```
 
 * From the root directory of the project run
 
 ``` shell
-  rake minify
+  bundle exec rake minify
 ```

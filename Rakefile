@@ -1,7 +1,20 @@
+require "sprockets"
+
 desc "Minify javascript and stylesheet files"
 task :minify do
-  system "juicer merge --force public/javascripts/all.js"
-  system "juicer merge --force public/stylesheets/all.css"
+  sprockets = Sprockets::Environment.new do |env|
+    env.logger = Logger.new(STDOUT)
+    env.js_compressor = :uglify
+    env.css_compressor = :sass
+  end
+
+  sprockets.append_path("public/javascripts")
+  sprockets.append_path("public/stylesheets")
+  js_assets = sprockets.find_asset("all.js")
+  css_assets = sprockets.find_asset("all.css")
+
+  js_assets.write_to("public/javascripts/all.min.js")
+  css_assets.write_to("public/stylesheets/all.min.css")
 end
 
 namespace :switch_to do
