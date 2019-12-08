@@ -22,21 +22,21 @@ describe("Encounters", function() {
       this.router.bind("route:index", this.routeSpy);
       this.router.navigate("", true);
       expect(this.routeSpy).toHaveBeenCalledWith();
-      expect(this.routeSpy.callCount).toEqual(1);
+      expect(this.routeSpy.calls.count()).toEqual(1);
     });
 
     it("fires encounters index for 'encounters.json' URL", function() {
       this.router.bind("route:index", this.routeSpy);
       this.router.navigate("encounters", true);
       expect(this.routeSpy).toHaveBeenCalledWith();
-      expect(this.routeSpy.callCount).toEqual(1);
+      expect(this.routeSpy.calls.count()).toEqual(1);
     });
 
     it("fires patients show for 'encounters/1.json' URL", function() {
       this.router.bind("route:show", this.routeSpy);
       this.router.navigate("patients/1", true);
       expect(this.routeSpy).toHaveBeenCalledWith("1");
-      expect(this.routeSpy.callCount).toEqual(1);
+      expect(this.routeSpy.calls.count()).toEqual(1);
     });
   });
 

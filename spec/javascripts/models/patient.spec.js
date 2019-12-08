@@ -96,14 +96,14 @@ describe("Patient", function() {
       this.mockModel.forceFetch();
 
       expect(this.mockModel.fetch).toHaveBeenCalled();
-      expect(this.mockModel.fetch.callCount).toEqual(1);
+      expect(this.mockModel.fetch.calls.count()).toEqual(1);
     });
 
     it("triggers a change event", function() {
       this.mockModel.forceFetch();
 
       expect(this.mockModel.trigger).toHaveBeenCalledWith("change");
-      expect(this.mockModel.trigger.callCount).toEqual(1);
+      expect(this.mockModel.trigger.calls.count()).toEqual(1);
     });
   });
 });

@@ -1,7 +1,10 @@
 source "http://rubygems.org"
 
-gem "rake"
 gem "rack"
+
+group :development, :test do
+  gem "rake"
+end
 
 group :development do
   gem "juicer"

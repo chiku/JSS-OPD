@@ -1,15 +1,17 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    cmdparse (2.0.3)
-    juicer (1.0.13)
+    cmdparse (3.0.4)
+    juicer (1.2.0)
       cmdparse
       nokogiri (>= 1.5.0)
-      rubyzip
-    nokogiri (1.5.0)
-    rack (1.4.0)
-    rake (0.9.2.2)
-    rubyzip (0.9.5)
+      rubyzip (= 0.9.9)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.7)
+      mini_portile2 (~> 2.4.0)
+    rack (2.0.7)
+    rake (13.0.1)
+    rubyzip (0.9.9)
 
 PLATFORMS
   ruby
@@ -18,3 +20,6 @@ DEPENDENCIES
   juicer
   rack
   rake
+
+BUNDLED WITH
+   1.17.3
