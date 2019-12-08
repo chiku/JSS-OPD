@@ -62,6 +62,9 @@ describe("Patient", function() {
   describe("on fetching from server", function() {
     beforeEach(function() {
       this.fakeServer = createFakePatientSuccessServer();
+      this.patient = new Application.Models.Patient({id: 'abc123'});
+      this.patient.fetch();
+      this.fakeServer.respond();
     });
 
     afterEach(function() {
@@ -69,19 +72,11 @@ describe("Patient", function() {
     });
 
     it("parses the response", function() {
-      var patient = new Application.Models.Patient({id: 'abc123'});
-      patient.fetch();
-      this.fakeServer.respond();
-
-      expect(patient.get('uuid')).toEqual('abc123');
+      expect(this.patient.get('uuid')).toEqual('abc123');
     });
 
     it("creates IDs from uuids", function() {
-      var patient = new Application.Models.Patient({id: 'abc123'});
-      patient.fetch();
-      this.fakeServer.respond();
-
-      expect(patient.get('id')).toEqual("abc123");
+      expect(this.patient.get('id')).toEqual("abc123");
     });
   });
 
