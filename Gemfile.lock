@@ -4,6 +4,13 @@ GEM
     concurrent-ruby (1.1.5)
     execjs (2.7.0)
     ffi (1.11.3)
+    jasmine (3.5.0)
+      jasmine-core (~> 3.5.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (3.5.0)
+    phantomjs (2.1.1.0)
     rack (2.0.7)
     rake (13.0.1)
     rb-fsevent (0.10.3)
@@ -24,6 +31,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jasmine
   rack
   rake
   sass

@@ -48,13 +48,22 @@ Run under production environment
 
 * Visit http://localhost:9292
 
-Run tests
----------
+Run tests using phantomjs
+-------------------------
 
 * From the root directory of the project run these commands
 
 ``` shell
-  bundle exec rackup specs.ru
+  bundle exec rake jasmine:ci
+```
+
+Run tests using a browser
+-----------------------
+
+* From the root directory of the project run these commands
+
+``` shell
+  bundle exec rake jasmine
 ```
 
 * Visit http://localhost:8888

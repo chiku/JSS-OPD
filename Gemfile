@@ -11,3 +11,7 @@ group :development do
   gem "uglifier"
   gem "sass"
 end
+
+group :test do
+  gem "jasmine", :require => false
+end
