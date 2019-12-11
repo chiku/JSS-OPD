@@ -12,7 +12,21 @@ jQuery(function() {
       'click': 'showPatient'
     },
 
-    template: jQuery(Application.Configuration.Selectors.templates.encounter).html(),
+    template: jQuery('\
+  <script type="text/template">\
+    <section class="grey-gradient margin-bottom-gutter">\
+      <img src="images/thumbnail.png" />\
+      <section class="encounter-container">\
+        <div class="patient"> <%= patient.display %> </div>\
+        <div class="provider"> <%= provider.display %> </div>\
+        <span>\
+          <span class="number">411</span>\
+          <span class="time replace-by-timeago" title="<%= encounterDatetime %>" ></span>\
+        </span>\
+      </section>\
+    </li>\
+  </script>\
+').html(),
 
     initialize: function(options) {
       this.model.bind('change', this.render, this);

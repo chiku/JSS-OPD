@@ -8,7 +8,30 @@ jQuery(function() {
 
     idName: 'appointments',
 
-    template: jQuery(Application.Configuration.Selectors.templates.encounters).html(),
+    template: jQuery(
+  '<script type="text/template">\
+    <header class="grey-gradient">Patients</header>\
+    <section class="content">\
+      <nav class="margin-bottom-gutter" id="encounters-filter">\
+        <ul>\
+          <li class="blue-gradient margin-right-gutter">Today</li>\
+          <li class="grey-gradient margin-right-gutter">Pending</li>\
+          <li class="grey-gradient">All</li>\
+        <ul>\
+      </nav>\
+      <input type="text" class="search margin-bottom-gutter wide" />\
+      <nav class="margin-bottom-gutter" id="encounters-sort">\
+        <ul>\
+          <li class="grey-gradient margin-right-gutter" data-sort-by="appointmentTime">Time</li>\
+          <li class="grey-gradient margin-right-gutter" data-sort-by="providerName">Doctor</li>\
+          <li class="blue-gradient margin-right-gutter" data-sort-by="patientName">Name</li>\
+          <li class="grey-gradient">Urgency</li>\
+        </ul>\
+      </nav>\
+      <section id="encounters-container"></section>\
+    </section>\
+  </script>\
+').html(),
 
     initialize: function(options) {
       this.encounterShowsContainerSelector = options.encounterShowsContainerSelector;
