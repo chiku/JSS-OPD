@@ -1,4 +1,2 @@
-.rvmrc
 Gemfile.lock
-public/index.html
-spec/javascripts/index.html
+node_modules/

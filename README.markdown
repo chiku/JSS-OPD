@@ -1,44 +1,27 @@
 An application for JSS using openMRS rest services
 --------------------------------------------------
 
-Steps to get the application running
-------------------------------------
+One-time setup
+--------------
 
 * Install ruby preferably version 1.9.2+. Ensure that ruby is in your path.
 
-* git clone the repository
+* Install the latest version of LTS nodejs. Ensure that `npm` is in your path.
+
+* `git clone` the repository.
 
 * Run the following from the root of your project.
 
 ``` shell
   gem install bundler
   bundle install
+  npm install
 ```
 
-* Create symlinks for pointing to development
+Run the application
+-------------------
 
-``` shell
-  bundle exec rake switch_to:dev
-```
-
-* Bring up the server in development mode
-
-``` shell
-  bundle exec rackup
-```
-
-* Visit http://localhost:9292
-
-Run under production environment
---------------------------------
-
-* Create symlinks for pointing to development
-
-``` shell
-  bundle exec rake switch_to:prod
-```
-
-* Ensure that assets are minified. See 'Minify assets' for more details.
+* Build the latest version of the application. Check `Build assets` for more details.
 
 * Bring up the server in production mode
 
@@ -48,40 +31,22 @@ Run under production environment
 
 * Visit http://localhost:9292
 
-Run tests using phantomjs
--------------------------
+Build assets
+------------
 
-* From the root directory of the project run these commands
-
-``` shell
-  bundle exec rake jasmine:ci
-```
-
-Run tests using a browser
------------------------
-
-* From the root directory of the project run these commands
-
-``` shell
-  bundle exec rake jasmine
-```
-
-* Visit http://localhost:8888
-
-Minify assets
--------------
-
-* We are using juicer to minify assets. This internally uses uglify. 'node' should be available in your path for this to work.
-
-
-* If you want to install tools to minify javascript and stylesheet files on your local box, run the following command. This is a one-time step.
-
-``` shell
-  bundle install
-```
+* We are `webpack` to build assets.
 
 * From the root directory of the project run
 
 ``` shell
-  bundle exec rake minify
+  npm run build
+```
+
+Run tests
+---------
+
+* From the root directory of the project run these commands
+
+``` shell
+  npm test
 ```

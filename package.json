@@ -1,0 +1,63 @@
+{
+  "name": "jss-opd",
+  "version": "0.0.8",
+  "description": "Implement Operation Department for JSS (Jan Swasthya Sahyog)",
+  "main": "app.js",
+  "dependencies": {
+    "backbone": "^1.4.0",
+    "backbone.nativeajax": "^0.4.4",
+    "jquery": "^3.4.1",
+    "timeago": "^1.6.7",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.3.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.19.1",
+    "jsdom": "^15.2.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "mocha": "^6.2.2",
+    "nock": "^11.7.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0",
+    "terser-webpack-plugin": "^2.3.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "lint": "eslint app.js src/",
+    "lint:fix": "npm run lint -- --fix",
+    "build": "webpack",
+    "test": "mocha --require ./test/setup.js --require @babel/register test/**/*.test.js test/*.test.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiku/JSS-OPD.git"
+  },
+  "keywords": [
+    "JSS",
+    "OPD",
+    "backbone"
+  ],
+  "author": "Chirantan Mitra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiku/JSS-OPD/issues"
+  },
+  "homepage": "https://github.com/chiku/JSS-OPD#readme"
+}
