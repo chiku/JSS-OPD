@@ -12,7 +12,7 @@ import './src/stylesheets/main.css';
 
 Backbone.ajax = BackboneAjax;
 
-export const mainSelector = 'body div[role="main"]';
+const mainSelector = 'body div[role="main"]';
 
 const appointmentsSection = document.createElement('section');
 appointmentsSection.setAttribute('id', appointmentsSelector.replace('#', ''));
