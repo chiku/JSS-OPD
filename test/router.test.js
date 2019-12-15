@@ -2,46 +2,43 @@ import Backbone from 'backbone';
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import nock from 'nock';
 
-import { EncountersCollection } from '../src/collections/encounters';
-import { PatientsShowView } from '../src/views/patients/show';
 import { EncountersIndexView } from '../src/views/encounters/index';
 import { Router } from '../src/router';
 
 chai.use(sinonChai);
 
-describe('Encounters', function() {
+describe('Encounters', () => {
   sinon.spy(EncountersIndexView.prototype, 'attachContentToCleanContainer');
   Backbone.history.start({ silent: true, pushState: true });
 
-  after(function() {
+  after(() => {
     EncountersIndexView.prototype.attachContentToCleanContainer.restore();
   });
 
-  describe('router', function() {
+  describe('router', () => {
     const router = new Router();
 
-    afterEach(function() {
+    afterEach(() => {
       EncountersIndexView.prototype.attachContentToCleanContainer.resetHistory();
     });
 
 
-    beforeEach(function() {
+    beforeEach(() => {
       router.navigate('elsewhere');
     });
 
-    afterEach(function() {
+    afterEach(() => {
       router.navigate('');
     });
 
-    it('fires encounters index for "" URL', function() {
+    it('fires encounters index for "" URL', () => {
       router.navigate('', true);
       expect(EncountersIndexView.prototype.attachContentToCleanContainer).to.have.been.callCount(1);
       expect(EncountersIndexView.prototype.attachContentToCleanContainer).to.have.been.calledWith();
     });
 
-    it('fires encounters index for "encounters.json" URL', function() {
+    it('fires encounters index for "encounters.json" URL', () => {
       router.navigate('encounters', true);
       expect(EncountersIndexView.prototype.attachContentToCleanContainer).to.have.been.callCount(1);
       expect(EncountersIndexView.prototype.attachContentToCleanContainer).to.have.been.calledWith();

@@ -37,7 +37,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "lint": "eslint app.js src/",
+    "lint": "eslint *.js src/ test/",
     "lint:fix": "npm run lint -- --fix",
     "start": "http-server",
     "test": "mocha --require ./test/setup.js --require @babel/register test/**/*.test.js test/*.test.js"

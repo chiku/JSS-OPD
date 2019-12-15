@@ -1,6 +1,6 @@
-const JSDOM = require('jsdom').JSDOM;
+const { JSDOM } = require('jsdom');
 
-const { window } = new JSDOM('<!DOCTYPE html>', {
+const { window } = new JSDOM('<!DOCTYPE html><head></head><body></body>', {
   url: 'http://localhost',
 });
 
@@ -9,6 +9,7 @@ global.document = window.document;
 global.XMLHttpRequest = window.XMLHttpRequest;
 
 const $ = require('jquery');
+
 global.$ = $;
 
 const Backbone = require('backbone');
