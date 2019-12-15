@@ -35,7 +35,7 @@ export const PatientsShowView = Backbone.View.extend({
 </script>
 `).html(),
 
-  initialize(options) {
+  initialize() {
     this.model.bind('change', this.attachContentToCleanContainer, this);
   },
 

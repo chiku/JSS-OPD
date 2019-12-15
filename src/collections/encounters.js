@@ -9,9 +9,7 @@ import { EncounterModel } from '../models/encounter';
 TimeAgo.addLocale(en);
 const timeAgo = new TimeAgo('en-US');
 
-const allowedReorderOn = function (field) {
-  return _(['patientName', 'providerName', 'appointmentTime']).include(field);
-};
+const allowedReorderOn = (field) => _(['patientName', 'providerName', 'appointmentTime']).include(field);
 
 export const EncountersCollection = Backbone.Collection.extend({
   model: EncounterModel,
@@ -43,9 +41,7 @@ export const EncountersCollection = Backbone.Collection.extend({
       return this;
     }
 
-    this.comparator = function (encounter) {
-      return encounter[field]();
-    };
+    this.comparator = (encounter) => encounter[field]();
 
     this.sortedBy = field;
     this.sort();

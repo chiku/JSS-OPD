@@ -20,6 +20,6 @@ export const Router = Backbone.Router.extend({
     this.encountersView.attachContentToCleanContainer();
   },
 
-  show(patientId) {
+  show() {
   },
 });

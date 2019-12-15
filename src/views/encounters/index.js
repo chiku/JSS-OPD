@@ -6,7 +6,6 @@ import { EncountersShowView } from './show';
 import { EncountersSortView } from './sort';
 
 const encounterShowsContainerSelector = '#encounters-container';
-const replaceByTimeagoSelector = '.replace-by-timeago';
 export const appointmentsSelector = '#appointments';
 
 export const EncountersIndexView = Backbone.View.extend({
@@ -40,7 +39,7 @@ export const EncountersIndexView = Backbone.View.extend({
 `,
   ).html(),
 
-  initialize(options) {
+  initialize() {
     this.listenTo(this.collection, 'add', this.render);
     this.listenTo(this.collection, 'remove', this.render);
     this.listenTo(this.collection, 'change', this.render);

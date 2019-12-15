@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 import Backbone from 'backbone';
 import BackboneAjax from 'backbone.nativeajax';
 
@@ -16,13 +14,13 @@ Backbone.ajax = BackboneAjax;
 
 export const mainSelector = 'body div[role="main"]';
 
-const appointmentsSection = window.document.createElement('section');
+const appointmentsSection = document.createElement('section');
 appointmentsSection.setAttribute('id', appointmentsSelector.replace('#', ''));
 
-const patientSection = window.document.createElement('section');
+const patientSection = document.createElement('section');
 patientSection.setAttribute('id', patientSelector.replace('#', ''));
 
-const mainContainer = window.document.querySelector(mainSelector);
+const mainContainer = document.querySelector(mainSelector);
 mainContainer.append(appointmentsSection);
 mainContainer.append(patientSection);
 

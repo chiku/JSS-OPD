@@ -30,7 +30,7 @@ export const EncountersShowView = Backbone.View.extend({
 </script>
 `).html(),
 
-  initialize(options) {
+  initialize() {
     this.model.bind('change', this.render, this);
     this.patient = new PatientModel({ id: this.model.get('patient').uuid });
     this.patientView = new PatientsShowView({
