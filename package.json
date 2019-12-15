@@ -23,6 +23,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-import": "^2.19.1",
+    "http-server": "^0.12.0",
     "jsdom": "^15.2.1",
     "mini-css-extract-plugin": "^0.8.0",
     "mocha": "^6.2.2",
@@ -35,9 +36,10 @@
     "webpack-cli": "^3.3.10"
   },
   "scripts": {
+    "build": "webpack",
     "lint": "eslint app.js src/",
     "lint:fix": "npm run lint -- --fix",
-    "build": "webpack",
+    "start": "http-server",
     "test": "mocha --require ./test/setup.js --require @babel/register test/**/*.test.js test/*.test.js"
   },
   "babel": {

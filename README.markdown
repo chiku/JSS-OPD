@@ -13,8 +13,6 @@ One-time setup
 * Run the following from the root of your project.
 
 ``` shell
-  gem install bundler
-  bundle install
   npm install
 ```
 
@@ -26,10 +24,10 @@ Run the application
 * Bring up the server in production mode
 
 ``` shell
-  bundle exec rackup -E production
+  npm start
 ```
 
-* Visit http://localhost:9292
+* Visit http://localhost:8080
 
 Build assets
 ------------
