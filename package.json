@@ -6,8 +6,8 @@
   "dependencies": {
     "backbone": "^1.4.0",
     "backbone.nativeajax": "^0.4.4",
+    "javascript-time-ago": "^2.0.4",
     "jquery": "^3.4.1",
-    "timeago": "^1.6.7",
     "underscore": "^1.9.1"
   },
   "devDependencies": {

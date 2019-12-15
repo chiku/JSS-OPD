@@ -1,7 +1,6 @@
 import _ from 'underscore';
 import Backbone from 'backbone';
 import $ from 'jquery';
-import 'timeago';
 
 import { EncountersShowView } from './show';
 import { EncountersSortView } from './sort';
@@ -57,8 +56,6 @@ export const EncountersIndexView = Backbone.View.extend({
       });
       $(encounterShowsContainerSelector).append(view.render().el);
     }, this);
-
-    $(replaceByTimeagoSelector).timeago();
 
     new EncountersSortView({
       collection: this.collection,

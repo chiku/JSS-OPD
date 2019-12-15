@@ -1,6 +1,5 @@
 import $ from 'jquery';
 
-import 'timeago';
 import Backbone from 'backbone';
 import BackboneAjax from 'backbone.nativeajax';
 

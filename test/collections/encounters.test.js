@@ -1,8 +1,13 @@
 import { expect } from 'chai';
 import nock from 'nock';
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 
 import { EncounterModel } from '../../src/models/encounter';
 import { EncountersCollection } from '../../src/collections/encounters';
+
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo('en-US');
 
 describe('Encounters collection', function() {
   it('has the URL to fetch encounters from', function() {
@@ -32,7 +37,7 @@ describe('Encounters collection', function() {
     const encounters = new EncountersCollection();
     encounters.add([encounterOne, encounterTwo, encounterThree]);
 
-    it('by patient name be default', function() {
+    it('by patient name by default', function() {
       expect(encounters.sortedBy).to.equal('patientName');
       expect(encounters.at(0)).to.equal(encounterThree);
       expect(encounters.at(1)).to.equal(encounterTwo);
@@ -85,19 +90,22 @@ describe('Encounters collection', function() {
   });
 
   describe('on fetching from server', function() {
+    const a1AppointmentTime = '2011-12-31T00:00:00.000+0530';
+    const a2AppointmentTime = '2012-01-31T00:00:00.000+0530';
+
     nock('http://localhost')
       .get('/sampleWSResponses/encounter.json')
       .reply(200, JSON.stringify({
         results: [{
             patient: { display: 'Patient Name 1' },
             provider: { display: 'Doctor Name 1' },
-            encounterDatetime: '2011-12-31T00:00:00.000+0530',
+            encounterDatetime: a1AppointmentTime,
             uuid: 'a1'
           },
           {
             patient: { display: 'Patient Name 2' },
             provider: { display: 'Doctor Name 2' },
-            encounterDatetime: '2012-01-31T00:00:00.000+0530',
+            encounterDatetime: a2AppointmentTime,
             uuid: 'a2'
           }
         ]
@@ -119,6 +127,12 @@ describe('Encounters collection', function() {
     it('creates IDs from UUIDs', function() {
       expect(encounters.get('a1').get('patient').display).to.equal('Patient Name 1');
       expect(encounters.get('a2').get('patient').display).to.equal('Patient Name 2');
+    });
+
+    it('formats date-time', function() {
+      console.dir(encounters.get('a1').get('formattedEncounterDatetime'))
+      expect(encounters.get('a1').get('formattedEncounterDatetime')).to.equal(timeAgo.format(new Date(a1AppointmentTime)));
+      expect(encounters.get('a2').get('formattedEncounterDatetime')).to.equal(timeAgo.format(new Date(a2AppointmentTime)));
     });
   });
 });

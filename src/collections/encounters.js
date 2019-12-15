@@ -1,8 +1,13 @@
 import _ from 'underscore';
 import Backbone from 'backbone';
+import TimeAgo from 'javascript-time-ago';
+import en from 'javascript-time-ago/locale/en';
 
 import { extension as urlExtension, encounters as encountersUrl } from '../config/urls';
 import { EncounterModel } from '../models/encounter';
+
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo('en-US');
 
 const allowedReorderOn = function (field) {
   return _(['patientName', 'providerName', 'appointmentTime']).include(field);
@@ -23,6 +28,7 @@ export const EncountersCollection = Backbone.Collection.extend({
     const encounters = response.results;
     _(encounters).each((encounter) => {
       encounter.id = encounter.uuid;
+      encounter.formattedEncounterDatetime = timeAgo.format(new Date(encounter.encounterDatetime));
     });
 
     return encounters;

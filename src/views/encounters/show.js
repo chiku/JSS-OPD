@@ -23,7 +23,7 @@ export const EncountersShowView = Backbone.View.extend({
       <div class="provider"> <%= provider.display %> </div>
       <span>
         <span class="number">411</span>
-        <span class="time replace-by-timeago" title="<%= encounterDatetime %>" ></span>
+        <span class="time"><%= formattedEncounterDatetime %></span>
       </span>
     </section>
   </li>
